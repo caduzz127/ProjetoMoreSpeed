@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Speed</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-image:
+                linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+                url(fundo_geral.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* HEADER */
+        .header {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 10px 30px;
+
+        }
+
+        .logo img {
+            width: 110px;
+        }
+
+        ul {
+            display: flex;
+            margin-left: auto;
+        }
+
+        .items-header {
+            list-style: none;
+            padding: 10px 15px;
+        }
+
+        .items-header a {
+            text-decoration: none;
+            color: #FAFAFA;
+            font-size: 18px;
+        }
+
+
+        /* ACTION */
+        .action {
+
+            display: flex;
+            flex-direction: column;
+            padding-top: 50px;
+            padding-left: 2%;
+            min-height: 300px;
+        }
+
+        .action h1 {
+            color: #7CFF00;
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .action h3 {
+            color: #FFFFFF;
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
+
+
+
+        /* CONTEÚDO */
+        .conteudo_planos {
+            padding: 40px;
+        }
+
+
+
+        /* PLANOS */
+        .titulo_planos {
+            text-align: center;
+            color: #FFFFFF;
+            margin-bottom: 40px;
+        }
+
+        .planos {
+            display: flex;
+            justify-content: center;
+            gap: 5%;
+        }
+
+        .card-planos {
+            background-color: #001EB4;
+            width: 330px;
+            height: 330px;
+            padding: 20px;
+
+            border-radius: 12px;
+            border: 2px solid #7CFF00;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .card-planos:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+
+        .card-planos h2 {
+
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+
+        .informacoes-planos {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 12px;
+            margin-bottom: 12px;
+            margin-left: 15%;
+            padding: 5px;
+            width: 100%;
+        }
+
+        .informacoes-planos img {
+            flex-shrink: 0;
+        }
+
+        .informacoes-planos span {
+            text-align: left;
+            color: #FFFFFF;
+            font-size: 18px;
+        }
+
+        /* BOTÃO */
+        .btn {
+            margin-top: auto;
+            padding: 10px;
+            width: 70%;
+            background-color: #5AAE50;
+            color: #FAFAFA;
+            border: none;
+
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .btn:hover {
+            background-color: #5AAE5A;
+        }
+
+
+
+       
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+        
+        /* ASSINATURAS*/
+        .assinaturas {
+            padding: 40px;
+            text-align: center;
+            color: #FFFFFF;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        /* carrossel*/
+        .carousel {
+            width: 100%;
+            margin: 40px auto;
+           
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .carousel-images {
+            width: 100%;
+            max-width: 1500px;
+            height: 900px;
+            position: relative;
+        }
+
+        .carousel-images img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none;
+            border-radius: 12px;
+        }
+
+        .carousel-images img.active {
+            display: block;
+        }
+
+        .carousel button {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="header">
+        <div class="logo">
+            <img src="https://www.morespeed.com.br/assets/images/logo/logo2023speedfundotransparante.png">
+        </div>
+
+        <ul>
+            <li class="items-header"><a href="#">Home</a></li>
+            <li class="items-header"><a href="#">About</a></li>
+            <li class="items-header"><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="action">
+        <div>
+            <h1>More Speed Fibra</h1>
+            <h3>Internet Fibra Óptica de Verdade, Sem Quedas e Sem Limites</h3>
+            <h3>Conectividade estável para jogos, streaming, trabalho e tudo o que importa.</h3>
+        </div>
+    </div>
+
+
+
+    <div class="conteudo_planos">
+        <div class="titulo_planos">
+            <h1>Nossos Planos</h1>
+
+        </div>
+
+        <div class="planos">
+
+            <div class="card-planos">
+                <h2>200 MEGAS</h2>
+                <div class="informacoes-planos">
+                    <img src="checkmark.png" width="22px">
+                    <span>100% Fibra Óptica</span>
+                </div>
+                <div class="informacoes-planos">
+                    <img src="checkmark.png" width="22px">
+                    <span>Wi-Fi de Qualidade</span>
+                </div>
+                <div class="informacoes-planos">
+                    <img src="checkmark.png" width="22px">
+                    <span>200 Megas de Download</span>
+                </div>
+                <div class="informacoes-planos">
+                    <img src="checkmark.png" width="22px">
+                    <span>100 Megas de Upload</span>
+                </div>
+
+                <button class="btn">Assinar</button>
+            </div>
+
+            <div class="card-planos">
+                <h2>300 MEGAS</h2>
+                <div class="informacoes-planos">
+                    <img src="checkmark.png" width="22px">
+                    <span>100% Fibra Óptica</span>
+                </div>
+                <div class="informacoes-planos">
+                    <img src="checkmark.png" width="22px">
+                    <span>Wi-Fi de Qualidade</span>
+                </div>
+                <div class="informacoes-planos">
+                    <img src="checkmark.png" width="22px">
+                    <span>300 Megas de Download</span>
+                </div>
+                <div class="informacoes-planos">
+                    <img src="checkmark.png" width="22px">
+                    <span>150 Megas de Upload</span>
+                </div>
+                <button class="btn" onclick="">Assinar</button>
+            </div>
+
+            <div class="card-planos">
+                <h2>450 MEGAS</h2>
+                <div class="informacoes-planos">
+                    <img src="checkmark.png" width="22px">
+                    <span>100% Fibra Óptica</span>
+                </div>
+                <div class="informacoes-planos">
+                    <img src="checkmark.png" width="22px">
+                    <span>Wi-Fi de Qualidade</span>
+                </div>
+                <div class="informacoes-planos">
+                    <img src="checkmark.png" width="22px">
+                    <span>400 Megas de Download</span>
+                </div>
+                <div class="informacoes-planos">
+                    <img src="checkmark.png" width="22px">
+                    <span>200 Megas de Upload</span>
+                </div>
+                <button class="btn">Assinar</button>
+            </div>
+
+            <div class="card-planos">
+                <h2>800 MEGAS</h2>
+                <div class="informacoes-planos">
+                    <img src="checkmark.png" width="22px">
+                    <span>100% Fibra Óptica</span>
+                </div>
+                <div class="informacoes-planos">
+                    <img src="checkmark.png" width="22px">
+                    <span>Wi-Fi de Qualidade</span>
+                </div>
+                <div class="informacoes-planos">
+                    <img src="checkmark.png" width="22px">
+                    <span>800 Megas de Download</span>
+                </div>
+                <div class="informacoes-planos">
+                    <img src="checkmark.png" width="22px">
+                    <span>400 Megas de Upload</span>
+                </div>
+                <button class="btn">Assinar</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="assinaturas">
+        <h1>Nossos Planos Possuem Algumas Assinaturas já Inclusas</h1>
+
+
+        <div class="carousel">
+
+            <button class="prev">❮</button>
+            <div class="carousel-images">
+                <img src="playkids.jpg" alt="PlayKidsLogo" class="active">
+                <img src="hbo.jpg" alt="HBOLogo">
+
+            </div>
+            <button class="next">❯</button>
+
+        </div>
+    </div>
+
+
+</body>
+
+<script>
+    const planoBasic = "Eu gostaria de Saber mais sobre o Plano de 200 Megas.";
+    const planoIntermediario = "Eu gostaria de Saber mais sobre o Plano Intermediário.";
+    const planoAvancado = "Eu gostaria de Saber mais sobre o Plano Avançado.";
+    const planoPremium = "Eu gostaria de Saber mais sobre o Plano Premium.";
+    function AssinarPlano1() {
+        const mensagem = `Olá, gostaria de agendar os seguintes serviços para meu carro:`;
+
+
+    }
+
+
+
+
+    const images = document.querySelectorAll('.carousel-images img');
+
+    let index = 0;
+
+    function showImage(i) {
+        images.forEach(img => img.classList.remove('active'));
+        images[i].classList.add('active');
+    }
+
+    // Cronômetro de 5 segundos para virar a imagem
+    setInterval(() => {
+        index = (index + 1) % images.length;
+        showImage(index);
+    }, 5000);
+
+</script>
+
+</html>
