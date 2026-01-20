@@ -1,0 +1,476 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* HEADER */
+.header {
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px 30px;
+    flex-wrap: wrap;
+
+}
+
+.background {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("fundoDegradeCopy.png");
+    background-size: cover;
+    background-position: 50% 60%;
+    background-repeat: no-repeat;
+}
+
+
+ul {
+    display: flex;
+    margin-left: auto;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.items-header {
+    list-style: none;
+    padding: 10px 15px;
+}
+
+.items-header a {
+    text-decoration: none;
+    color: #FAFAFA;
+    font-size: 18px;
+}
+
+
+/* ACTION */
+.action {
+
+
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    padding-left: 2%;
+    padding-right: 2%;
+    min-height: 500px;
+}
+
+.action h1 {
+    color: #7CFF00;
+    font-size: 3rem;
+    word-wrap: break-word;
+}
+
+.action h3 {
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    word-wrap: break-word;
+}
+
+.titulo_action {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 35px;
+}
+
+.verificacoes {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+
+}
+
+.verificacoes h2 {
+    color: #FFFFFF;
+    font-size: 1.8rem;
+
+}
+
+.action p {
+    color: #FFFFFF;
+    font-size: 18px;
+    margin-left: 60px;
+    margin-bottom: 15px;
+}
+
+.btn-planos {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 57px;
+    padding: 12px 25px;
+    width: 300px;
+    background-color: #5AAE50;
+    color: #FAFAFA;
+    border: none;
+
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CONTEÚDO */
+.conteudo_planos {
+    padding: 40px;
+    margin-top: 9%;
+}
+
+/* PLANOS */
+.title-planos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    color: #7CFF00;
+}
+
+.planos {
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    flex-wrap: wrap;
+}
+
+.card-planos {
+    background-color: #001EB4;
+    width: 330px;
+    height: 330px;
+    padding: 20px;
+
+    border-radius: 12px;
+    border: 2px solid #7CFF00;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.card-planos:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+.card-planos h2 {
+
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.informacoes-planos {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    margin-bottom: 12px;
+    margin-left: 15%;
+    padding: 5px;
+    width: 100%;
+}
+
+.informacoes-planos img {
+    flex-shrink: 0;
+}
+
+.informacoes-planos span {
+    text-align: left;
+    color: #FFFFFF;
+    font-size: 18px;
+}
+
+/* BOTÃO */
+.btn {
+    margin-top: auto;
+    padding: 10px;
+    width: 70%;
+    background-color: #5AAE50;
+    color: #FAFAFA;
+    border: none;
+
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.btn:hover {
+    background-color: #5AAE5A;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ASSINATURAS*/
+.assinaturas {
+    padding: 40px;
+    text-align: center;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* carrossel*/
+.carousel {
+    width: 100%;
+    margin: 40px auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.carousel-images {
+    width: 100%;
+    max-width: 1500px;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    position: relative;
+}
+
+.carousel-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+    border-radius: 12px;
+}
+
+.carousel-images img.active {
+    display: block;
+}
+
+.carousel button {
+    display: none;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .header {
+        padding: 10px 15px;
+        gap: 10px;
+    }
+
+    .logo img {
+        width: 80px;
+    }
+
+    ul {
+        margin-left: 0;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .items-header {
+        padding: 8px 10px;
+    }
+
+    .items-header a {
+        font-size: 14px;
+    }
+
+    .action {
+        padding-top: 30px;
+        padding-left: 15px;
+        padding-right: 15px;
+        min-height: 200px;
+    }
+
+    .action h1 {
+        font-size: 2rem;
+        margin-bottom: 8px;
+    }
+
+    .action h3 {
+        font-size: 1rem;
+        margin-bottom: 6px;
+    }
+
+    .conteudo_planos {
+        padding: 20px;
+    }
+
+    .titulo_planos {
+        margin-bottom: 20px;
+    }
+
+    .titulo_planos h1 {
+        font-size: 1.8rem;
+    }
+
+    .planos {
+        gap: 15px;
+    }
+
+    .card-planos {
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+        padding: 15px;
+    }
+
+    .card-planos h2 {
+        font-size: 1.3rem;
+        margin-bottom: 12px;
+    }
+
+    .informacoes-planos {
+        margin-left: 10%;
+        font-size: 14px;
+    }
+
+    .informacoes-planos span {
+        font-size: 14px;
+    }
+
+    .btn {
+        width: 80%;
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    .assinaturas {
+        padding: 20px;
+    }
+
+    .assinaturas h1 {
+        font-size: 1.3rem;
+    }
+
+    .carousel {
+        margin: 20px auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 8px 10px;
+        flex-direction: column;
+    }
+
+    .logo img {
+        width: 70px;
+        margin-bottom: 10px;
+    }
+
+    ul {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .items-header {
+        padding: 5px 8px;
+    }
+
+    .items-header a {
+        font-size: 12px;
+    }
+
+    .action {
+        padding-top: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        min-height: 150px;
+    }
+
+    .action h1 {
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+    }
+
+    .action h3 {
+        font-size: 0.9rem;
+        margin-bottom: 4px;
+    }
+
+    .conteudo_planos {
+        padding: 15px;
+    }
+
+    .titulo_planos h1 {
+        font-size: 1.3rem;
+    }
+
+    .planos {
+        gap: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-planos {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+        padding: 12px;
+    }
+
+    .card-planos h2 {
+        font-size: 1.1rem;
+    }
+
+    .informacoes-planos {
+        margin-left: 5%;
+        gap: 8px;
+        margin-bottom: 8px;
+    }
+
+    .informacoes-planos img {
+        width: 18px !important;
+    }
+
+    .informacoes-planos span {
+        font-size: 12px;
+    }
+
+    .btn {
+        width: 85%;
+        padding: 7px;
+        font-size: 12px;
+    }
+
+    .assinaturas {
+        padding: 15px;
+    }
+
+    .assinaturas h1 {
+        font-size: 1.1rem;
+    }
+
+    .carousel {
+        margin: 15px auto;
+        padding: 10px 0;
+    }
+}

@@ -9,344 +9,147 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        body {
-            background-image:
-                linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-                url(fundo_geral.png);
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-
-        /* HEADER */
-        .header {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            padding: 10px 30px;
-
-        }
-
-        .logo img {
-            width: 110px;
-        }
-
-        ul {
-            display: flex;
-            margin-left: auto;
-        }
-
-        .items-header {
-            list-style: none;
-            padding: 10px 15px;
-        }
-
-        .items-header a {
-            text-decoration: none;
-            color: #FAFAFA;
-            font-size: 18px;
-        }
-
-
-        /* ACTION */
-        .action {
-
-            display: flex;
-            flex-direction: column;
-            padding-top: 50px;
-            padding-left: 2%;
-            min-height: 300px;
-        }
-
-        .action h1 {
-            color: #7CFF00;
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
-
-        .action h3 {
-            color: #FFFFFF;
-            font-size: 1.5rem;
-            margin-bottom: 8px;
-        }
-
-
-
-
-        /* CONTEÚDO */
-        .conteudo_planos {
-            padding: 40px;
-        }
-
-
-
-        /* PLANOS */
-        .titulo_planos {
-            text-align: center;
-            color: #FFFFFF;
-            margin-bottom: 40px;
-        }
-
-        .planos {
-            display: flex;
-            justify-content: center;
-            gap: 5%;
-        }
-
-        .card-planos {
-            background-color: #001EB4;
-            width: 330px;
-            height: 330px;
-            padding: 20px;
-
-            border-radius: 12px;
-            border: 2px solid #7CFF00;
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-        }
-
-        .card-planos:hover {
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transform: translateY(-5px);
-            transition: all 0.3s ease;
-        }
-
-        .card-planos h2 {
-
-            color: #ffffff;
-            margin-bottom: 15px;
-        }
-
-        .informacoes-planos {
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            gap: 12px;
-            margin-bottom: 12px;
-            margin-left: 15%;
-            padding: 5px;
-            width: 100%;
-        }
-
-        .informacoes-planos img {
-            flex-shrink: 0;
-        }
-
-        .informacoes-planos span {
-            text-align: left;
-            color: #FFFFFF;
-            font-size: 18px;
-        }
-
-        /* BOTÃO */
-        .btn {
-            margin-top: auto;
-            padding: 10px;
-            width: 70%;
-            background-color: #5AAE50;
-            color: #FAFAFA;
-            border: none;
-
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 15px;
-        }
-
-        .btn:hover {
-            background-color: #5AAE5A;
-        }
-
-
-
-       
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-        
-        /* ASSINATURAS*/
-        .assinaturas {
-            padding: 40px;
-            text-align: center;
-            color: #FFFFFF;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        /* carrossel*/
-        .carousel {
-            width: 100%;
-            margin: 40px auto;
-           
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px 0;
-        }
-
-        .carousel-images {
-            width: 100%;
-            max-width: 1500px;
-            height: 900px;
-            position: relative;
-        }
-
-        .carousel-images img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: none;
-            border-radius: 12px;
-        }
-
-        .carousel-images img.active {
-            display: block;
-        }
-
-        .carousel button {
-            display: none;
-        }
-    </style>
 </head>
 
 <body>
+    <div class="background">
+        <nav class="header">
+            <div class="logo">
+                <img src="https://www.morespeed.com.br/assets/images/logo/logo2023speedfundotransparante.png"
+                    width="100px">
+            </div>
 
-    <nav class="header">
-        <div class="logo">
-            <img src="https://www.morespeed.com.br/assets/images/logo/logo2023speedfundotransparante.png">
+            <ul>
+                <li class="items-header"><a href="#">Home</a></li>
+                <li class="items-header"><a href="#">About</a></li>
+                <li class="items-header"><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="action">
+            <div class="titulo_action">
+                <h1>More Speed Fibra</h1>
+                <h3>Internet Fibra Óptica de Verdade, Sem Quedas e Sem Limites</h3>
+                <h3>Conectividade estável para jogos, streaming, trabalho e tudo o que importa.</h3>
+            </div>
+
+            <div class="verificacoes">
+                <img src="checkmark.png" alt="" width="40px">
+                <h2>Conexão Ultrarrápida</h2>
+            </div>
+            <p>Sua Internet Fibra Óptica com ultra velocidade <br>baixa latência</p>
+            <div class="verificacoes">
+                <img src="checkmark.png" alt="" width="40px">
+                <h2>Estabilidade Garantiada</h2>
+            </div>
+            <p>Internet estável e sem quedas para jogos, streaming, trabalho<br>e muito mais</p>
+            <div class="verificacoes">
+                <img src="checkmark.png" alt="" width="40px">
+                <h2>Sem Limite de Uso</h2>
+            </div>
+            <p>navegue, baixe, assista e jogue sem ter que se preocupar <br>com franquias ou limites de dados</p>
+            <button class="btn-planos">Conheça Nossos Planos</button>
         </div>
 
-        <ul>
-            <li class="items-header"><a href="#">Home</a></li>
-            <li class="items-header"><a href="#">About</a></li>
-            <li class="items-header"><a href="#">Contact</a></li>
-        </ul>
-    </nav>
-    <div class="action">
-        <div>
-            <h1>More Speed Fibra</h1>
-            <h3>Internet Fibra Óptica de Verdade, Sem Quedas e Sem Limites</h3>
-            <h3>Conectividade estável para jogos, streaming, trabalho e tudo o que importa.</h3>
+
+        <div class="conteudo_planos">
+            <div class="title-planos">
+                <h1>Nossos Planos</h1>
+            </div>
+
+            <div class="planos">
+                <div class="card-planos">
+                    <h2>200 MEGAS</h2>
+                    <div class="informacoes-planos">
+                        <img src="checkmark.png" width="22px">
+                        <span>100% Fibra Óptica</span>
+                    </div>
+                    <div class="informacoes-planos">
+                        <img src="checkmark.png" width="22px">
+                        <span>Wi-Fi de Qualidade</span>
+                    </div>
+                    <div class="informacoes-planos">
+                        <img src="checkmark.png" width="22px">
+                        <span>200 Megas de Download</span>
+                    </div>
+                    <div class="informacoes-planos">
+                        <img src="checkmark.png" width="22px">
+                        <span>100 Megas de Upload</span>
+                    </div>
+
+                    <button class="btn">Assinar</button>
+                </div>
+
+                <div class="card-planos">
+                    <h2>300 MEGAS</h2>
+                    <div class="informacoes-planos">
+                        <img src="checkmark.png" width="22px">
+                        <span>100% Fibra Óptica</span>
+                    </div>
+                    <div class="informacoes-planos">
+                        <img src="checkmark.png" width="22px">
+                        <span>Wi-Fi de Qualidade</span>
+                    </div>
+                    <div class="informacoes-planos">
+                        <img src="checkmark.png" width="22px">
+                        <span>300 Megas de Download</span>
+                    </div>
+                    <div class="informacoes-planos">
+                        <img src="checkmark.png" width="22px">
+                        <span>150 Megas de Upload</span>
+                    </div>
+                    <button class="btn" onclick="">Assinar</button>
+                </div>
+
+                <div class="card-planos">
+                    <h2>450 MEGAS</h2>
+                    <div class="informacoes-planos">
+                        <img src="checkmark.png" width="22px">
+                        <span>100% Fibra Óptica</span>
+                    </div>
+                    <div class="informacoes-planos">
+                        <img src="checkmark.png" width="22px">
+                        <span>Wi-Fi de Qualidade</span>
+                    </div>
+                    <div class="informacoes-planos">
+                        <img src="checkmark.png" width="22px">
+                        <span>400 Megas de Download</span>
+                    </div>
+                    <div class="informacoes-planos">
+                        <img src="checkmark.png" width="22px">
+                        <span>200 Megas de Upload</span>
+                    </div>
+                    <button class="btn">Assinar</button>
+                </div>
+
+                <div class="card-planos">
+                    <h2>800 MEGAS</h2>
+                    <div class="informacoes-planos">
+                        <img src="checkmark.png" width="22px">
+                        <span>100% Fibra Óptica</span>
+                    </div>
+                    <div class="informacoes-planos">
+                        <img src="checkmark.png" width="22px">
+                        <span>Wi-Fi de Qualidade</span>
+                    </div>
+                    <div class="informacoes-planos">
+                        <img src="checkmark.png" width="22px">
+                        <span>800 Megas de Download</span>
+                    </div>
+                    <div class="informacoes-planos">
+                        <img src="checkmark.png" width="22px">
+                        <span>400 Megas de Upload</span>
+                    </div>
+                    <button class="btn">Assinar</button>
+                </div>
+
+            </div>
+
         </div>
     </div>
 
-
-
-    <div class="conteudo_planos">
-        <div class="titulo_planos">
-            <h1>Nossos Planos</h1>
-
-        </div>
-
-        <div class="planos">
-
-            <div class="card-planos">
-                <h2>200 MEGAS</h2>
-                <div class="informacoes-planos">
-                    <img src="checkmark.png" width="22px">
-                    <span>100% Fibra Óptica</span>
-                </div>
-                <div class="informacoes-planos">
-                    <img src="checkmark.png" width="22px">
-                    <span>Wi-Fi de Qualidade</span>
-                </div>
-                <div class="informacoes-planos">
-                    <img src="checkmark.png" width="22px">
-                    <span>200 Megas de Download</span>
-                </div>
-                <div class="informacoes-planos">
-                    <img src="checkmark.png" width="22px">
-                    <span>100 Megas de Upload</span>
-                </div>
-
-                <button class="btn">Assinar</button>
-            </div>
-
-            <div class="card-planos">
-                <h2>300 MEGAS</h2>
-                <div class="informacoes-planos">
-                    <img src="checkmark.png" width="22px">
-                    <span>100% Fibra Óptica</span>
-                </div>
-                <div class="informacoes-planos">
-                    <img src="checkmark.png" width="22px">
-                    <span>Wi-Fi de Qualidade</span>
-                </div>
-                <div class="informacoes-planos">
-                    <img src="checkmark.png" width="22px">
-                    <span>300 Megas de Download</span>
-                </div>
-                <div class="informacoes-planos">
-                    <img src="checkmark.png" width="22px">
-                    <span>150 Megas de Upload</span>
-                </div>
-                <button class="btn" onclick="">Assinar</button>
-            </div>
-
-            <div class="card-planos">
-                <h2>450 MEGAS</h2>
-                <div class="informacoes-planos">
-                    <img src="checkmark.png" width="22px">
-                    <span>100% Fibra Óptica</span>
-                </div>
-                <div class="informacoes-planos">
-                    <img src="checkmark.png" width="22px">
-                    <span>Wi-Fi de Qualidade</span>
-                </div>
-                <div class="informacoes-planos">
-                    <img src="checkmark.png" width="22px">
-                    <span>400 Megas de Download</span>
-                </div>
-                <div class="informacoes-planos">
-                    <img src="checkmark.png" width="22px">
-                    <span>200 Megas de Upload</span>
-                </div>
-                <button class="btn">Assinar</button>
-            </div>
-
-            <div class="card-planos">
-                <h2>800 MEGAS</h2>
-                <div class="informacoes-planos">
-                    <img src="checkmark.png" width="22px">
-                    <span>100% Fibra Óptica</span>
-                </div>
-                <div class="informacoes-planos">
-                    <img src="checkmark.png" width="22px">
-                    <span>Wi-Fi de Qualidade</span>
-                </div>
-                <div class="informacoes-planos">
-                    <img src="checkmark.png" width="22px">
-                    <span>800 Megas de Download</span>
-                </div>
-                <div class="informacoes-planos">
-                    <img src="checkmark.png" width="22px">
-                    <span>400 Megas de Upload</span>
-                </div>
-                <button class="btn">Assinar</button>
-            </div>
-
-        </div>
-    </div>
-
-    <div class="assinaturas">
+    <!-- <div class="assinaturas">
         <h1>Nossos Planos Possuem Algumas Assinaturas já Inclusas</h1>
 
 
@@ -361,7 +164,7 @@
             <button class="next">❯</button>
 
         </div>
-    </div>
+    </div> -->
 
 
 </body>
