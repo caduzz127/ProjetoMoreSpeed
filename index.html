@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>More Speed</title>
+    <title>More Speed Telecom</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
@@ -17,20 +17,30 @@
 <body>
     <div class="background">
         <nav class="header">
-            <div class="logo">
-                <img src="https://www.morespeed.com.br/assets/images/logo/logo2023speedfundotransparante.png"
-                    width="100px">
-            </div>
+            <div class="container">
+                <div class="logo">
+                    <img src="https://www.morespeed.com.br/assets/images/logo/logo2023speedfundotransparante.png"
+                        width="100px">
+                </div>
 
-            <ul class="navbar">
-                <li class="items-header"><a href="#">Home</a></li>
-                <li class="items-header"><a href="#">About</a></li>
-                <li class="items-header"><a href="#">Contact</a></li>
-            </ul>
-            <div class="hamburguer">
-                <span></span>
-                <span></span>
-                <span></span>
+                <ul class="navbar">
+                    <li class="items-header"><a href="index.html">início</a></li>
+                    <li class="items-header"><a href="#sobre">Sobre</a></li>
+                    <li class="items-header"><a href="#contato">Contato</a></li>
+                    <li class="items-header"><a
+                            href="http://atendimento.morespeed.com.br:8000/accounts/central/login">Área do Cliente</a>
+                    </li>
+                    <li class="items-header"><a href="#fac">Ajuda</a></li>
+                    <li class="items-header"><a href="#footer">Redes Sociais</a></li>
+                </ul>
+                <div class="">
+                    <button class="hamburger" id="hamburguer">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+
             </div>
         </nav>
         <div class="action">
@@ -55,11 +65,11 @@
                 <h2>Sem Limite de Uso</h2>
             </div>
             <p>navegue, baixe, assista e jogue sem ter que se preocupar <br>com franquias ou limites de dados</p>
-            <button class="btn-planos">Conheça Nossos Planos</button>
+            <a href="#planos"><button class="btn-planos">Conheça Nossos Planos</button></a>
         </div>
 
 
-        <div class="conteudo_planos">
+        <div class="conteudo_planos" id="planos">
             <div class="title-planos">
                 <h1>Nossos Planos</h1>
             </div>
@@ -157,7 +167,7 @@
 
     <div class="assinaturas">
         <div class="assinaturas-title-informacoes">
-            <h2>Assinaturas Premium Inclusas</h2>
+            <h2>Assinaturas Inclusas Com os Planos</h2>
             <h3>Muito mais que Internet Fibra Óptica</h3>
             <div class="assinaturas-informacoes">
                 <h3>Sua internet vai muito além da conexão</h3>
@@ -185,9 +195,71 @@
         <div class="assinaturas-imagens">
             <img src="assinaturas.jpg" alt="Assinaturas Premium Inclusas" width="800px">
         </div>
+    </div>
+    <hr>
+    <div class="fac" id="fac">
+        <h1>Perguntas Frequentes</h1>
+        <div class="box-fac">
+            <ul class="fac-perguntas">
+                <li>
+                    <h2>O que é Internet Fibra Óptica?</h2>
+                    <p>Internet Fibra Óptica é uma tecnologia de conexão que utiliza cabos de fibra de vidro para
+                        transmitir
+                        dados em alta velocidade, proporcionando uma conexão mais rápida e estável em comparação com
+                        outras
+                        tecnologias.</p>
+                </li>
+                <li>
+                    <h2>Diferenças entre o 5g e o 2.4g?</h2>
+                    <p>O 5G opera em frequências mais altas, oferecendo maior velocidade e menor latência, enquanto o
+                        2.4G opera em frequências mais baixas, proporcionando maior alcance e melhor penetração em
+                        obstáculos.</p>
+                </li>
+                <li>
+                    <h2>Minha Internet está lenta o que eu posso fazer?</h2>
+                    <p>Verifique a velocidade da sua conexão, reinicie o roteador, verifique se há muitos dispositivos
+                        conectados e certifique-se de que não há interferências no sinal Wi-Fi. Se o problema
+                        persistir,
+                        entre em contato com o suporte técnico.</p>
+                </li>
+                <li>
+                    <h2>Por que minha internet fica lenta em alguns momentos?</h2>
+                    <p>Pode ser causado por muitos dispositivos conectados, interferência no Wi-Fi, distância do roteador ou problemas no equipamento.</p>
+                </li>
+                <li>
+                    <h2>O que fazer se a internet cair?</h2>
+                    <p>Reinicie o roteador, verifique cabos e luzes do equipamento. Se persistir, entre em contato com o suporte.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <hr>
+    <div class="contato-geral">
+        <div class="titulo-form">
+            <h1>Fale Conosco</h1>
+            <h3>Estamos aqui para ajudar! Entre em contato conosco para qualquer dúvida ou suporte.</h3>
+        </div>
+        <div class="contato" id="contato">
 
+            <div class="contato-form">
 
+                <div class="box-form">
+                    <h3>Envie sua Menssagem!</h3>
+                    <form action="">
+                        <input type="text" placeholder="Nome Completo" required>
+                        <input type="email" placeholder="E-mail" required>
+                        <input type="tel" placeholder="Telefone" required>
+                        <textarea placeholder="Mensagem" required></textarea>
+                        <button type="submit">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+            <div class="maps">
 
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3674.960365851028!2d-43.655517024911425!3d-22.91483267924946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bfb20c20c20bd%3A0x3f02fe70f74d77f5!2sMore%20Speed%20Comunica%C3%A7%C3%B5es%20LTDA.!5e0!3m2!1spt-BR!2sbr!4v1769605922719!5m2!1spt-BR!2sbr"></iframe>
+            </div>
+        </div>
     </div>
 
 
@@ -204,6 +276,33 @@
 
 
     }
+
+    // Hamburguer Menu — agora controla a .navbar no responsivo
+    const hamburguer = document.getElementById('hamburguer');
+    const navbar = document.querySelector('.navbar');
+
+    hamburguer.addEventListener('click', function (e) {
+        e.stopPropagation();
+        hamburguer.classList.toggle('active');
+        if (navbar) navbar.classList.toggle('active');
+    });
+
+    // Fechar menu ao clicar em um link da navbar
+    const navbarLinks = document.querySelectorAll('.navbar a');
+    navbarLinks.forEach(item => {
+        item.addEventListener('click', function () {
+            hamburguer.classList.remove('active');
+            if (navbar) navbar.classList.remove('active');
+        });
+    });
+
+    // Fechar menu ao clicar fora
+    document.addEventListener('click', function (event) {
+        if (!event.target.closest('.header')) {
+            hamburguer.classList.remove('active');
+            if (navbar) navbar.classList.remove('active');
+        }
+    });
 
 </script>
 
