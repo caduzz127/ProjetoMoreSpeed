@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* Fundo escuro */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+
+            background: rgba(0, 0, 0, 0.6);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.3s;
+            z-index: 1000;
+        }
+
+        /* Modal */
+        .modal {
+            background: #111;
+            color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 800px;
+            max-height: 500px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Modal ativo */
+        .modal-overlay.ativo {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="abrirModal" > aperte para o modal aparecer</button>
+
+
+    <div class="modal-overlay" id="modal">
+        <div class="modal">
+            <h2>Título do Modal</h2>
+            <p>Conteúdo do modal aqui.</p>
+            <button id="fecharModal">Fechar</button>
+        </div>
+    </div>
+
+    <script>
+    
+        const modal = document.getElementById('modal');
+        const abrir = document.getElementById('abrirModal');
+        const fechar = document.getElementById('fecharModal');
+    
+        abrir.addEventListener('click', () => {
+            modal.classList.add('ativo');
+        });
+    
+        fechar.addEventListener('click', () => {
+            modal.classList.remove('ativo');
+        });
+    
+        // fechar clicando fora
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('ativo');
+            }
+        });
+    
+
+        
+    
+    </script>
+</body>
+
+
+</html>

@@ -11,73 +11,55 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="cardStyles.css">
+    <script src="modal.js" defer></script>
 </head>
 
 <body>
-    <div class="background">
-        <nav class="header">
-            <div class="container">
-                <div class="logo">
-                    <img src="https://www.morespeed.com.br/assets/images/logo/logo2023speedfundotransparante.png"
-                        width="120px">
-                </div>
-
-                <ul class="navbar">
-                    <li class="items-header"><a href="index.html">início</a></li>
-                    <li class="items-header"><a href="#sobre">Sobre</a></li>
-                    <li class="items-header"><a href="#contato">Contato</a></li>
-                    <li class="items-header"><a
-                            href="http://atendimento.morespeed.com.br:8000/accounts/central/login">Área do Cliente</a>
-                    </li>
-                    <li class="items-header"><a href="#fac">Ajuda</a></li>
-                    <li class="items-header"><a href="#footer">Redes Sociais</a></li>
-                </ul>
-                <div class="">
-                    <button class="hamburger" id="hamburguer">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                </div>
-
-            </div>
-        </nav>
-        <div class="action">
-
-
-            <div class="titulo-action">
-                <div class="config-titulo">
-                    <h1>More Speed Fibra</h1>
-                    <div>
-                        <svg class="wifi-icon" width="40" viewBox="0 0 24 24" fill="none">
-                            <circle class="dot" cx="12" cy="18" r="1.5" />
-                            <path class="wifi arc3" d="M8 14c2-2 6-2 8 0" />
-                            <path class="wifi arc2" d="M5 11c3-3 11-3 14 0" />
-                            <path class="wifi arc1" d="M2 8c5-4 15-4 20 0" />
-                        </svg>
-                    </div>
-                </div>
-                <h3>Internet Fibra Óptica de Verdade, Sem Quedas e Sem Limites</h3>
-                <h3>Conectividade estável para jogos, streaming, trabalho e tudo o que importa.</h3>
-            </div>
-            <div class="verificacoes">
-                <img src="checkmark.png" alt="" width="40px">
-                <h2>Conexão Ultrarrápida</h2>
-            </div>
-            <p>Sua Internet Fibra Óptica com ultra velocidade <br>baixa latência</p>
-            <div class="verificacoes">
-                <img src="checkmark.png" alt="" width="40px">
-                <h2>Estabilidade Garantiada</h2>
-            </div>
-            <p>Internet estável e sem quedas para jogos, streaming, trabalho<br>e muito mais</p>
-            <div class="verificacoes">
-                <img src="checkmark.png" alt="" width="40px">
-                <h2>Sem Limite de Uso</h2>
-            </div>
-            <p>navegue, baixe, assista e jogue sem ter que se preocupar <br>com franquias ou limites de dados</p>
-            <a href="#planos"><button class="btn-planos">Conheça Nossos Planos</button></a>
+    <div class="action-contato">
+        <div>
+            <img src="imagens/w.png" alt="" width="40px">
+            <a href="https://api.whatsapp.com/send/?phone=5521965615909&text=Olá,+gostaria+de+Saber+mais+sobre+a+More+Speed.+Estou+vindo+pelo+site&type=phone_number&app_absent=0"
+                target="_blank"> WhatsApp / Call Center:: (21) 96565-5662 </a>
         </div>
+        <div class="action-contato-loc">
+            <img src="imagens/loc1.png" alt="" width="30px">
+            <a
+                href="https://www.google.com/maps/place/More+Speed+Comunica%C3%A7%C3%B5es+LTDA./@-22.9148277,-43.655517,17z/data=!3m1!4b1!4m6!3m5!1s0x9bfb20c20c20bd:0x3f02fe70f74d77f5!8m2!3d-22.9148327!4d-43.6529421!16s%2Fg%2F11gnnmqkn_?entry=ttu&g_ep=EgoyMDI2MDIwMS4wIKXMDSoASAFQAw%3D%3D">
+                R. Cilon Cunha Brum, 206 - sobrado - RJ</a>
+        </div>
+    </div>
+    <nav class="header">
+
+        <div class="container">
+            <div class="logo">
+                <img src="https://www.morespeed.com.br/assets/images/logo/logo2023speedfundotransparante.png"
+                    width="120px">
+            </div>
+
+            <ul class="navbar">
+                <li class="items-header"><a href="index.html">início</a></li>
+                <li class="items-header"><a href="#sobre">Sobre</a></li>
+                <li class="items-header"><a href="#contato">Contato</a></li>
+                <li class="items-header"><a href="#fac">Ajuda</a></li>
+                <li class="items-header"><a href="#footer">Redes Sociais</a></li>
+            </ul>
+            <div class="area-do-cliente">
+                <button onclick="paginaCliente()"> <img src="imagens/clientes.png" alt="" width="20px">área do
+                    Cliente</button>
+            </div>
+            <!-- <div class="">
+                <button class="hamburger" id="hamburguer">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div> -->
+
+        </div>
+    </nav>
+    <div class="background">
+
     </div>
 
 
@@ -90,113 +72,475 @@
         </div>
 
         <div class="planos">
-            <div class="card-planos">
-                <h2>200 MEGAS</h2>
-                <div class="informacoes-planos">
-                    <img src="checkmark.png" width="22px">
-                    <span>100% Fibra Óptica</span>
+            <div class="card-complete">
+                <div class="card-complete-titulo">
+                    <svg class="wifi-icon-cards" width="40" viewBox="0 0 24 24" fill="none">
+                        <circle class="dot" cx="12" cy="18" r="1.5" />
+                        <path class="wifi arc3" d="M8 14c2-2 6-2 8 0" />
+                        <path class="wifi arc2" d="M5 11c3-3 11-3 14 0" />
+                        <path class="wifi arc1" d="M2 8c5-4 15-4 20 0" />
+                    </svg>
+                    <h3>Plano Família</h3>
                 </div>
-                <div class="informacoes-planos">
-                    <img src="checkmark.png" width="22px">
-                    <span>Wi-Fi de Qualidade</span>
-                </div>
-                <div class="informacoes-planos">
-                    <img src="checkmark.png" width="22px">
-                    <span>200 Megas de Download</span>
-                </div>
-                <div class="informacoes-planos">
-                    <img src="checkmark.png" width="22px">
-                    <span>100 Megas de Upload</span>
-                </div>
+                <div class="card-header">
 
-                <button class="btn" onclick="AssinarPlano200()">Assinar</button>
+                    <div class="card-header-titulo">
+
+
+
+
+                        <img src="imagens/bannerFamily.svg" alt="" width="330px" class="promo">
+
+
+                    </div>
+
+                    <div class="card-planos">
+
+
+
+
+                        <div class="informacoes-planos">
+                            <img src="imagens/carraca.png" width="22px">
+                            <span>Intalação Grátis</span>
+                        </div>
+                        <div class="informacoes-planos">
+                            <img src="imagens/carraca.png" width="22px">
+                            <span>Wi-Fi de Qualidade</span>
+                        </div>
+                        <div class="informacoes-planos">
+                            <img src="imagens/carraca.png" width="22px">
+                            <span>Suporte Técnico 24hrs</span>
+                        </div>
+
+                        <div class="informacoes-planos">
+                            <img src="imagens/carraca.png" width="22px">
+                            <span>Acesso ao Plano Standard</span>
+                        </div>
+                        <div class="card-assinatura">
+                            <span>+</span>
+                            <div class="card-assinatura-imagem">
+                                <img src="imagens/assin.svg" alt="" width="300px">
+                            </div>
+                        </div>
+                        <div class="preco">
+                            <span class="so">só</span>
+                            <span class="rs">R$</span>
+
+                            <div class="valor">
+                                <span class="inteiro">104</span>
+                                <div class="centavos">
+                                    <span class="cents">,99</span>
+                                    <span class="mes">/mês</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn" onclick="AssinarPlano200()">Assinar Agora</button>
+                        <button id="open-modal" class="open-modal">*Para mais informações sobre o plano </button>
+                        <div id="modal" class="modal-overlay">
+                            <div class="modal">
+                                <div class="modal-header">
+                                    <h1>PLANO FAMÍLIA</h1>
+                                    <button id="close-modal">X</button>
+                                </div>
+                                <hr>
+                                <div class="modal-content">
+                                    <p>*Instalação Grátis</p>
+                                    <p>* Download 150 Megas e Upload 150 Megas</p>
+                                    <p>*Wi-Fi 6 inlcuso para trazer mais velocidade</p>
+                                    <p>*Plano de Internet 100% Fibra Óptica, ideal para uso residencial, perfeito para
+                                        navegação, estudos, trabalho remoto e consumo de streaming em até 5 dispositivos
+                                        simultâneos.</p>
+                                    <p>*Planos disponíveis para áreas urbanas. Consulte viabilidade técnica para
+                                        empresas e
+                                        para
+                                        outras áreas.</p>
+                                    <p>Plano com acesso a Streamings Inclusos: <br>
+                                        <strong>Streaming de Filmes e Séries</strong> – Catálogo com milhares de
+                                        títulos,
+                                        incluindo lançamentos, clássicos, séries, documentários e conteúdo infantil.
+                                        <br><strong>Streaming Infantil</strong> – Desenhos, filmes educativos e
+                                        conteúdos
+                                        seguros
+                                        para crianças.
+                                    </p>
+                                    <p>*Conteúdos disponíveis conforme contrato e disponibilidade da plataforma.</p>
+                                    <p>Valor: <strong>R$79,90</strong></p>
+                                    <p>*Promoção não acumulativa</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="card-planos">
-                <h2>300 MEGAS</h2>
-                <div class="informacoes-planos">
-                    <img src="checkmark.png" width="22px">
-                    <span>100% Fibra Óptica</span>
+
+
+            <div class="card-complete">
+                <div class="card-complete-titulo">
+                    <svg class="wifi-icon-cards" width="40" viewBox="0 0 24 24" fill="none">
+                        <circle class="dot" cx="12" cy="18" r="1.5" />
+                        <path class="wifi arc3" d="M8 14c2-2 6-2 8 0" />
+                        <path class="wifi arc2" d="M5 11c3-3 11-3 14 0" />
+                        <path class="wifi arc1" d="M2 8c5-4 15-4 20 0" />
+                    </svg>
+                    <h3>Plano Gamer</h3>
                 </div>
-                <div class="informacoes-planos">
-                    <img src="checkmark.png" width="22px">
-                    <span>Wi-Fi de Qualidade</span>
+                <div class="card-header">
+
+                    <div class="card-header-titulo">
+
+
+
+
+                        <img src="imagens/banG.svg" alt="" width="330px" class="promo">
+
+
+                    </div>
+
+                    <div class="card-planos">
+
+
+
+
+                        <div class="informacoes-planos">
+                            <img src="imagens/carraca.png" width="22px">
+                            <span>Intalação Grátis</span>
+                        </div>
+                        <div class="informacoes-planos">
+                            <img src="imagens/carraca.png" width="22px">
+                            <span>Wi-Fi de Qualidade</span>
+                        </div>
+                        <div class="informacoes-planos">
+                            <img src="imagens/carraca.png" width="22px">
+                            <span>Suporte Técnico 24hrs</span>
+                        </div>
+
+                        <div class="informacoes-planos">
+                            <img src="imagens/carraca.png" width="22px">
+                            <span>Acesso ao Plano Standard</span>
+                        </div>
+                        <div class="card-assinatura">
+                            <span>+</span>
+                            <div class="card-assinatura-imagem">
+                                <img src="imagens/assin.svg" alt="" width="300px">
+                            </div>
+                        </div>
+                        <div class="preco">
+                            <span class="so">só</span>
+                            <span class="rs">R$</span>
+
+                            <div class="valor">
+                                <span class="inteiro">104</span>
+                                <div class="centavos">
+                                    <span class="cents">,99</span>
+                                    <span class="mes">/mês</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn" onclick="AssinarPlano200()">Assinar Agora</button>
+                        <button id="open-modal" class="open-modal">*Para mais informações sobre o plano </button>
+                        <div id="modal" class="modal-overlay">
+                            <div class="modal">
+                                <div class="modal-header">
+                                    <h1>PLANO FAMÍLIA</h1>
+                                    <button id="close-modal">X</button>
+                                </div>
+                                <hr>
+                                <div class="modal-content">
+                                    <p>*Instalação Grátis</p>
+                                    <p>* Download 150 Megas e Upload 150 Megas</p>
+                                    <p>*Wi-Fi 6 inlcuso para trazer mais velocidade</p>
+                                    <p>*Plano de Internet 100% Fibra Óptica, ideal para uso residencial, perfeito para
+                                        navegação, estudos, trabalho remoto e consumo de streaming em até 5 dispositivos
+                                        simultâneos.</p>
+                                    <p>*Planos disponíveis para áreas urbanas. Consulte viabilidade técnica para
+                                        empresas e
+                                        para
+                                        outras áreas.</p>
+                                    <p>Plano com acesso a Streamings Inclusos: <br>
+                                        <strong>Streaming de Filmes e Séries</strong> – Catálogo com milhares de
+                                        títulos,
+                                        incluindo lançamentos, clássicos, séries, documentários e conteúdo infantil.
+                                        <br><strong>Streaming Infantil</strong> – Desenhos, filmes educativos e
+                                        conteúdos
+                                        seguros
+                                        para crianças.
+                                    </p>
+                                    <p>*Conteúdos disponíveis conforme contrato e disponibilidade da plataforma.</p>
+                                    <p>Valor: <strong>R$79,90</strong></p>
+                                    <p>*Promoção não acumulativa</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="informacoes-planos">
-                    <img src="checkmark.png" width="22px">
-                    <span>300 Megas de Download</span>
-                </div>
-                <div class="informacoes-planos">
-                    <img src="checkmark.png" width="22px">
-                    <span>150 Megas de Upload</span>
-                </div>
-                <button class="btn" onclick="AssinarPlano300()">Assinar</button>
             </div>
 
-            <div class="card-planos">
-                <h2>450 MEGAS</h2>
-                <div class="informacoes-planos">
-                    <img src="checkmark.png" width="22px">
-                    <span>100% Fibra Óptica</span>
+
+
+
+            <div class="card-complete">
+                <div class="card-complete-titulo">
+                    <svg class="wifi-icon-cards" width="40" viewBox="0 0 24 24" fill="none">
+                        <circle class="dot" cx="12" cy="18" r="1.5" />
+                        <path class="wifi arc3" d="M8 14c2-2 6-2 8 0" />
+                        <path class="wifi arc2" d="M5 11c3-3 11-3 14 0" />
+                        <path class="wifi arc1" d="M2 8c5-4 15-4 20 0" />
+                    </svg>
+                    <h3>Plano Família</h3>
                 </div>
-                <div class="informacoes-planos">
-                    <img src="checkmark.png" width="22px">
-                    <span>Wi-Fi de Qualidade</span>
+                <div class="card-header">
+
+                    <div class="card-header-titulo">
+
+
+
+
+                        <img src="imagens/bannerFamily.svg" alt="" width="330px" class="promo">
+
+
+                    </div>
+
+                    <div class="card-planos">
+
+
+
+
+                        <div class="informacoes-planos">
+                            <img src="imagens/carraca.png" width="22px">
+                            <span>Intalação Grátis</span>
+                        </div>
+                        <div class="informacoes-planos">
+                            <img src="imagens/carraca.png" width="22px">
+                            <span>Wi-Fi de Qualidade</span>
+                        </div>
+                        <div class="informacoes-planos">
+                            <img src="imagens/carraca.png" width="22px">
+                            <span>Suporte Técnico 24hrs</span>
+                        </div>
+
+                        <div class="informacoes-planos">
+                            <img src="imagens/carraca.png" width="22px">
+                            <span>Acesso ao Plano Standard</span>
+                        </div>
+                        <div class="card-assinatura">
+                            <span>+</span>
+                            <div class="card-assinatura-imagem">
+                                <img src="imagens/assin.svg" alt="" width="300px">
+                            </div>
+                        </div>
+                        <div class="preco">
+                            <span class="so">só</span>
+                            <span class="rs">R$</span>
+
+                            <div class="valor">
+                                <span class="inteiro">104</span>
+                                <div class="centavos">
+                                    <span class="cents">,99</span>
+                                    <span class="mes">/mês</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn" onclick="AssinarPlano200()">Assinar Agora</button>
+                        <button id="open-modal" class="open-modal">*Para mais informações sobre o plano </button>
+                        <div id="modal" class="modal-overlay">
+                            <div class="modal">
+                                <div class="modal-header">
+                                    <h1>PLANO FAMÍLIA</h1>
+                                    <button id="close-modal">X</button>
+                                </div>
+                                <hr>
+                                <div class="modal-content">
+                                    <p>*Instalação Grátis</p>
+                                    <p>* Download 150 Megas e Upload 150 Megas</p>
+                                    <p>*Wi-Fi 6 inlcuso para trazer mais velocidade</p>
+                                    <p>*Plano de Internet 100% Fibra Óptica, ideal para uso residencial, perfeito para
+                                        navegação, estudos, trabalho remoto e consumo de streaming em até 5 dispositivos
+                                        simultâneos.</p>
+                                    <p>*Planos disponíveis para áreas urbanas. Consulte viabilidade técnica para
+                                        empresas e
+                                        para
+                                        outras áreas.</p>
+                                    <p>Plano com acesso a Streamings Inclusos: <br>
+                                        <strong>Streaming de Filmes e Séries</strong> – Catálogo com milhares de
+                                        títulos,
+                                        incluindo lançamentos, clássicos, séries, documentários e conteúdo infantil.
+                                        <br><strong>Streaming Infantil</strong> – Desenhos, filmes educativos e
+                                        conteúdos
+                                        seguros
+                                        para crianças.
+                                    </p>
+                                    <p>*Conteúdos disponíveis conforme contrato e disponibilidade da plataforma.</p>
+                                    <p>Valor: <strong>R$79,90</strong></p>
+                                    <p>*Promoção não acumulativa</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="informacoes-planos">
-                    <img src="checkmark.png" width="22px">
-                    <span>400 Megas de Download</span>
-                </div>
-                <div class="informacoes-planos">
-                    <img src="checkmark.png" width="22px">
-                    <span>200 Megas de Upload</span>
-                </div>
-                <button class="btn" onclick="AssinarPlano450()">Assinar</button>
             </div>
 
-            <div class="card-planos">
-                <h2>800 MEGAS</h2>
-                <div class="informacoes-planos">
-                    <img src="checkmark.png" width="22px">
-                    <span>100% Fibra Óptica</span>
+
+
+
+            <div class="card-complete">
+                <div class="card-complete-titulo">
+                    <svg class="wifi-icon-cards" width="40" viewBox="0 0 24 24" fill="none">
+                        <circle class="dot" cx="12" cy="18" r="1.5" />
+                        <path class="wifi arc3" d="M8 14c2-2 6-2 8 0" />
+                        <path class="wifi arc2" d="M5 11c3-3 11-3 14 0" />
+                        <path class="wifi arc1" d="M2 8c5-4 15-4 20 0" />
+                    </svg>
+                    <h3>Plano Gamer</h3>
                 </div>
-                <div class="informacoes-planos">
-                    <img src="checkmark.png" width="22px">
-                    <span>Wi-Fi de Qualidade</span>
+                <div class="card-header">
+
+                    <div class="card-header-titulo">
+
+
+
+
+                        <img src="imagens/banG.svg" alt="" width="330px" class="promo">
+
+
+                    </div>
+
+                    <div class="card-planos">
+
+
+
+
+                        <div class="informacoes-planos">
+                            <img src="imagens/carraca.png" width="22px">
+                            <span>Intalação Grátis</span>
+                        </div>
+                        <div class="informacoes-planos">
+                            <img src="imagens/carraca.png" width="22px">
+                            <span>Wi-Fi de Qualidade</span>
+                        </div>
+                        <div class="informacoes-planos">
+                            <img src="imagens/carraca.png" width="22px">
+                            <span>Suporte Técnico 24hrs</span>
+                        </div>
+
+                        <div class="informacoes-planos">
+                            <img src="imagens/carraca.png" width="22px">
+                            <span>Acesso ao Plano Standard</span>
+                        </div>
+                        <div class="card-assinatura">
+                            <span>+</span>
+                            <div class="card-assinatura-imagem">
+                                <img src="imagens/assin.svg" alt="" width="300px">
+                            </div>
+                        </div>
+                        <div class="preco">
+                            <span class="so">só</span>
+                            <span class="rs">R$</span>
+
+                            <div class="valor">
+                                <span class="inteiro">104</span>
+                                <div class="centavos">
+                                    <span class="cents">,99</span>
+                                    <span class="mes">/mês</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn" onclick="AssinarPlano200()">Assinar Agora</button>
+                        <button id="open-modal" class="open-modal">*Para mais informações sobre o plano </button>
+                        <div id="modal" class="modal-overlay">
+                            <div class="modal">
+                                <div class="modal-header">
+                                    <h1>PLANO FAMÍLIA</h1>
+                                    <button id="close-modal">X</button>
+                                </div>
+                                <hr>
+                                <div class="modal-content">
+                                    <p>*Instalação Grátis</p>
+                                    <p>* Download 150 Megas e Upload 150 Megas</p>
+                                    <p>*Wi-Fi 6 inlcuso para trazer mais velocidade</p>
+                                    <p>*Plano de Internet 100% Fibra Óptica, ideal para uso residencial, perfeito para
+                                        navegação, estudos, trabalho remoto e consumo de streaming em até 5 dispositivos
+                                        simultâneos.</p>
+                                    <p>*Planos disponíveis para áreas urbanas. Consulte viabilidade técnica para
+                                        empresas e
+                                        para
+                                        outras áreas.</p>
+                                    <p>Plano com acesso a Streamings Inclusos: <br>
+                                        <strong>Streaming de Filmes e Séries</strong> – Catálogo com milhares de
+                                        títulos,
+                                        incluindo lançamentos, clássicos, séries, documentários e conteúdo infantil.
+                                        <br><strong>Streaming Infantil</strong> – Desenhos, filmes educativos e
+                                        conteúdos
+                                        seguros
+                                        para crianças.
+                                    </p>
+                                    <p>*Conteúdos disponíveis conforme contrato e disponibilidade da plataforma.</p>
+                                    <p>Valor: <strong>R$79,90</strong></p>
+                                    <p>*Promoção não acumulativa</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="informacoes-planos">
-                    <img src="checkmark.png" width="22px">
-                    <span>800 Megas de Download</span>
-                </div>
-                <div class="informacoes-planos">
-                    <img src="checkmark.png" width="22px">
-                    <span>400 Megas de Upload</span>
-                </div>
-                <button class="btn" onclick="AssinarPlano800()">Assinar</button>
             </div>
+
+
+
+
+        </div>
+
+    </div>
+
+    </div>
+
+
+    <div class="confianca">
+        <div class="confianca-titulo">
+            <h1>Por que escolher a <span class="brand">More Speed</span> ?</h1>
+            <h2>Qualidade e Progresso</h2>
+        </div>
+        <div class="confianca-imgs">
+
+
+            <div>
+                <img src="imagens/Velocidade.svg" alt="" width="350px">
+            </div>
+
+            <div>
+                <img src="imagens/foco1.svg" alt="" width="350px">
+            </div>
+
+            <div>
+                <img src="imagens/atendimento.svg" alt="" width="350px">
+            </div>
+
+            <div>
+                <img src="imagens/segu.svg" alt="" width="350px">
+            </div>
+
+            <div>
+                <img src="imagens/servidor.svg" alt="" width="350px">
+            </div>
+            <div>
+                <img src="imagens/jogos.svg" alt="">
+            </div>
+        </div>
+        <div>
 
         </div>
 
     </div>
 
 
-    <div class="assinaturas">
-        <div class="assinaturas-title">
-            <h1>Assinaturas Inclusas Com os Planos</h1>
-            <h2>Muito mais que Internet Fibra Óptica</h2>
 
 
-        </div>
-        <div class="assinaturas-imagem">
-            <div class="carousel">
-               <img src="" alt="">
-            </div>
-        </div>
-    </div>
 
- <div class="fac" id="fac">
+    <div class="fac" id="fac">
         <div class="box-fac">
-            <h1>Perguntas Frequentes</h1>
+            <div class="fac-titulo">
+                <h1>Perguntas Frequentes</h1>
+                <h1 style="color: #7CFF00;">(FAC)</h1>
+            </div>
             <ul class="fac-perguntas">
                 <li>
                     <h2>O que é Internet Fibra Óptica?</h2>
@@ -234,14 +578,12 @@
                 </li>
             </ul>
         </div>
-        <div class="fac-imagem">
-            <img src="pensanteH.png" alt="">
-        </div>
+
     </div>
 
     <div class="sobre" id="sobre">
         <div class="sobre-imagem">
-            <img src="sobreMedio.jpg" alt="">
+            <img src="imagens/sob.jpg" alt="">
         </div>
         <div class="sobre-conteudo">
             <div class="sobre-titulo">
@@ -249,18 +591,23 @@
 
             </div>
             <div class="sobre-texto">
-                <p>A More Speed é uma provedora de internet fibra óptica dedicada a oferecer conexões rápidas, estáveis
+                <p>A More Speed é uma provedora de internet fibra óptica dedicada a oferecer conexões rápidas,
+                    estáveis
                     e
-                    acessíveis para residências e empresas. Com foco na satisfação do cliente, a More Speed investe em
+                    acessíveis para residências e empresas. Com foco na satisfação do cliente, a More Speed investe
+                    em
                     tecnologia de ponta e atendimento personalizado para garantir que seus usuários tenham a melhor
-                    experiência online possível. A empresa se destaca por sua infraestrutura moderna, suporte técnico
+                    experiência online possível. A empresa se destaca por sua infraestrutura moderna, suporte
+                    técnico
                     eficiente
                     e planos flexíveis que atendem às diversas necessidades dos consumidores.</p>
-                <br>
 
-                <p>Com investimento contínuo em infraestrutura tecnológica de última geração, a empresa garante conexões
+                <br>
+                <p>Com investimento contínuo em infraestrutura tecnológica de última geração, a empresa garante
+                    conexões
                     rápidas,
-                    estáveis e seguras, proporcionando uma experiência online superior para navegação, trabalho, estudos
+                    estáveis e seguras, proporcionando uma experiência online superior para navegação, trabalho,
+                    estudos
                     e entretenimento.
                     Além disso, a More Speed valoriza o relacionamento com seus clientes, oferecendo um atendimento
                     humanizado, ágil e personalizado,
@@ -270,7 +617,7 @@
     </div>
 
 
-   
+
 
     <div class="contato-geral" id="contato">
         <div class="titulo-form">
@@ -279,19 +626,17 @@
         </div>
         <div class="contato">
 
-            <div class="contato-form">
-
-                <div class="box-form">
-                    <h3>Envie sua Menssagem Para Nosso Suporte!</h3>
-                    <form action="">
-                        <input type="text" placeholder="Nome Completo" required id="nome">
-                        <input type="email" placeholder="E-mail" required id="email">
-                        <input type="tel" placeholder="Telefone" required id="telefone">
-                        <textarea placeholder="Mensagem" required id="mensagem"></textarea>
-                        <button onclick="enviarMensagemWhatsApp()">Enviar Mensagem</button>
-                    </form>
-                </div>
+            <div class="box-form">
+                <h3>Envie sua Menssagem Para Nosso Suporte!</h3>
+                <form action="">
+                    <input type="text" placeholder="Nome Completo" required id="nome">
+                    <input type="email" placeholder="E-mail" required id="email">
+                    <input type="tel" placeholder="Telefone" required id="telefone">
+                    <textarea placeholder="Mensagem" required id="mensagem"></textarea>
+                    <button onclick="enviarMensagemWhatsApp()">Enviar Mensagem</button>
+                </form>
             </div>
+
             <div class="maps">
 
                 <iframe
@@ -299,9 +644,29 @@
             </div>
         </div>
     </div>
-    <footer>
-        <div class="informacoes-extras">
-            <img src="" alt="">
+    <footer id="footer">
+        <div class="footer-header">
+            <h1>More Speed - Comunicações LTDA</h1>
+            <div class="redes-sociais">
+                <h3>Redes Sociais da More Speed</h3>
+                <a href="https://wa.me/5521965655662" target="_blank"><img src="imagens/whatsapp.svg" alt=""></a>
+                <a href="https://www.instagram.com/morespeed_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                    target="_blank"><img src="imagens/instagram.svg" alt=""> </a>
+            </div>
+            <hr>
+        </div>
+        <div class="informacoes-footer">
+            <img src="https://www.morespeed.com.br/assets/images/logo/logo2023speedfundotransparante.png" width="200px">
+            <div class="informacoes-footer-detalhes">
+                <h3><strong>Informações de Contato</h3>
+                <p><strong>Telefone Instalação:</strong> (21) 96565-5662</p>
+                <p><strong>Email Suporte:</strong> suporte@morespeed.com.br</p>
+                <p><strong>Email Financeiro:</strong> financeiro@morespeed.com.br</p>
+                <p><strong>Outros Email:</strong> contato@morespeed.com.br</p>
+                <p><strong>Funcionamento:</strong> Segunda à Sexta, das 09h às 18h. Sábado das 09h às 16h.</p>
+
+            </div>
+            <img src="imagens/anatel.svg" alt="" width="250px">
         </div>
 
     </footer>
@@ -359,6 +724,44 @@
         const url = `https://wa.me/${telefoneInstalacao}?text=${encodeURIComponent(plano800)}`;
         window.open(url, '_blank');
     }
+
+
+    function paginaCliente() {
+        window.location.href = "http://atendimento.morespeed.com.br:8000/accounts/central/login";
+    }
+
+
+    const track = document.querySelector('.carrossel-track');
+
+    // duplica os itens para loop infinito
+    track.innerHTML += track.innerHTML;
+
+    let position = 0;
+    const speed = 1; // quanto menor, mais suave
+
+    function animate() {
+        position += speed;
+
+        if (position >= track.scrollWidth / 2) {
+            position = 0;
+        }
+
+        track.style.transform = `translateX(-${position}px)`;
+        requestAnimationFrame(animate);
+    }
+
+    animate();
+
+    let currentIndex = 0;
+    const images = document.querySelectorAll('.carrossel-track img');
+
+    function moveToNextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        const offset = -currentIndex * 50; // Mover para a próxima imagem
+        track.style.transform = `translateX(${offset}%)`;
+    }
+
+    setInterval(moveToNextImage, 3000); // Muda a imagem a cada 3 segundos
 </script>
 
 </html>
