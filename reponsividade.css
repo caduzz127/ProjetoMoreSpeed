@@ -114,12 +114,12 @@
 
 
     .background {
-        height: 100vh; 
+        height: 100vh;
         background-image: url("imagens/inMobile.png");
-        background-size: cover;   /* 👈 importante */
-        background-position: 70% center;
+        background-size: contain;   /* 👈 muda aqui */
+        background-position: center top;
         background-repeat: no-repeat;
-       
+        
     }
 
 
