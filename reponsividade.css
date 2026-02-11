@@ -162,10 +162,6 @@
         align-items: center;
     }
 
-    .contato .maps iframe {
-        height: 500px;
-    }
-
     /*FOOTER*/
     .footer {
         flex-direction: column;
