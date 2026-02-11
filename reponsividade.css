@@ -114,12 +114,12 @@
 
 
     .background {
-        height: 100vh;
+        width: 100%;
         background-image: url("imagens/inMobile.png");
-        background-size: contain;   /* 👈 muda aqui */
+        background-size: contain;
         background-position: center top;
         background-repeat: no-repeat;
-        
+        aspect-ratio: 1024 / 1536; /* proporção real da imagem */
     }
 
 
