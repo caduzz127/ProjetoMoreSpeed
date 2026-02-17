@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Speed - Corporativo</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="headerStyle.css">
+    <link rel="stylesheet" href="corporativoStyle.css">
+    <link rel="stylesheet" href="footerStyle.css">
+    <link rel="stylesheet" href="reponsividadeHeader.css">
+    <script src="menuHamburguerC.js" defer></script>
+    <script src="fixacaoHeader.js" defer></script>
+    <script src="modalCorporativo.js" defer></script>
+</head>
+
+<body>
+    <div class="top-bar">
+        <div>
+
+            <a class="action-contato"
+                href="https://api.whatsapp.com/send/?phone=5521965615909&text=Olá,+gostaria+de+Saber+mais+sobre+a+More+Speed.+Estou+vindo+pelo+site&type=phone_number&app_absent=0"
+                target="_blank"> <img src="imagens/w.png" alt="" width="40px">
+                <p>WhatsApp / Call Center:: (21)
+                    96561-5909 </p>
+            </a>
+        </div>
+        <div>
+            <a class="action-contato-loc"
+                href="https://www.google.com/maps/place/More+Speed+Comunica%C3%A7%C3%B5es+LTDA./@-22.9148277,-43.655517,17z/data=!3m1!4b1!4m6!3m5!1s0x9bfb20c20c20bd:0x3f02fe70f74d77f5!8m2!3d-22.9148327!4d-43.6529421!16s%2Fg%2F11gnnmqkn_?entry=ttu&g_ep=EgoyMDI2MDIwMS4wIKXMDSoASAFQAw%3D%3D">
+                <img src="imagens/loc1.png" alt="" width="30px">
+                <p>R. Cilon Cunha Brum, 206 - sobrado - RJ </p>
+            </a>
+        </div>
+    </div>
+    <header class="header">
+        <div class="container">
+
+
+
+            <div class="logo">
+                <img src="https://www.morespeed.com.br/assets/images/logo/logo2023speedfundotransparante.png"
+                    width="120px">
+            </div>
+
+            <nav class="nav" id="navC">
+                <ul class="navbar">
+                    <li class="items-header"><a href="index.html">início</a></li>
+                    <li class="items-header"><a href="#sobre">Sobre</a></li>
+                    <li class="items-header"><a href="#contato">Contato</a></li>
+                    <li class="items-header"><a href="corporativo.html">Corporativo</a></li>
+                    <li class="items-header"><a href="#footer">Redes Sociais</a></li>
+                </ul>
+            </nav>
+
+            <div class="actions">
+
+                <button class="cliente" onclick="paginaCliente()"> <img src="imagens/clientes.png" alt=""
+                        width="20px">área do
+                    Cliente
+                </button>
+
+                <button class="hamburger" id="hamburguerC">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+            </div>
+
+
+
+        </div>
+    </header>
+    <div class="background-corporativo">
+
+    </div>
+
+    <div class="diferenciais">
+        <div class="diferenciais-header">
+            <h1>Diferenciais para Sua Empresa</h1>
+            <h2>Oferecemos soluções completas para impulsionar seu negócio</h2>
+        </div>
+
+
+        <div class="cards">
+
+            <div class="card-diferenciais">
+
+                <div class="card-img">
+                    <img src="imagens/fibra.svg" alt="Link Dedicado">
+                    <div class="overlay"></div>
+                </div>
+
+                <div class="card-content">
+                    <h3>Link Dedicado</h3>
+                    <button class="open-modal" id="open-modal-dedicado">Saiba mais</button>
+                    <div id="modal-dedicado" class="modal-overlay">
+                        <div class="modal">
+                            <div class="modal-header">
+                                <h1>PLANO LINK DEDICADO</h1>
+                                <button id="close-modal-dedicado" class="close-modal">X</button>
+                            </div>
+                            <hr>
+                            <div class="modal-content">
+                                <p>*Instalação Grátis</p>
+                                <p>* Download 150 Mega e Upload 150 Mega</p>
+                                <p>*Wi-Fi 6 inlcuso para trazer mais velocidade</p>
+                                <p>*Plano de Internet 100% Fibra Óptica, ideal para uso residencial, perfeito para
+                                    navegação, estudos, trabalho remoto e consumo de streaming em até 5 dispositivos
+                                    simultâneos.</p>
+                                <p>*Planos disponíveis para áreas urbanas. Consulte viabilidade técnica para
+                                    empresas e
+                                    para
+                                    outras áreas.</p>
+                                <p>Plano com acesso a Streamings Inclusos: <br>
+                                    <strong>Streaming de Filmes e Séries</strong> – Catálogo com milhares de
+                                    títulos,
+                                    incluindo lançamentos, clássicos, séries, documentários e conteúdo infantil.
+                                    <br><strong>Streaming Infantil</strong> – Desenhos, filmes educativos e
+                                    conteúdos
+                                    seguros
+                                    para crianças.
+                                </p>
+                                <p>*Conteúdos disponíveis conforme contrato e disponibilidade da plataforma.</p>
+                                <p>Valor: <strong>R$79,90</strong></p>
+                                <p>*Promoção não acumulativa</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-footer">
+                    <button onclick="paginaCliente()">Contrate agora</button>
+                </div>
+
+            </div>
+
+            <div class="card-diferenciais">
+
+                <div class="card-img">
+                    <img src="imagens/corp.svg" alt="Link Dedicado">
+                    <div class="overlay"></div>
+                </div>
+
+                <div class="card-content">
+                    <h3>Atendimento Especializado</h3>
+                    <button class="open-modal">Saiba mais</button>
+
+                </div>
+
+                <div class="card-footer">
+                    <button onclick="paginaCliente()">Contrate agora</button>
+                </div>
+
+            </div>
+
+            <div class="card-diferenciais">
+
+                <div class="card-img">
+                    <img src="imagens/voip.svg" alt="Link Dedicado">
+                    <div class="overlay"></div>
+                </div>
+
+                <div class="card-content">
+                    <h3>VoIP</h3>
+                    <button class="open-modal">Saiba mais</button>
+
+                </div>
+
+                <div class="card-footer">
+                    <button onclick="paginaCliente()">Contrate agora</button>
+                </div>
+            </div>
+
+
+            <div class="card-diferenciais">
+
+                <div class="card-img">
+                    <img src="imagens/SLA.svg" alt="Link Dedicado">
+                    <div class="overlay"></div>
+                </div>
+
+                <div class="card-content">
+                    <h3>SLA 99,9% Garantido</h3>
+                    <button class="open-modal" id="open-modalSLA">Saiba mais</button>
+                    <div id="modalSLA" class="modal-overlay">
+                        <div class="modal">
+                            <div class="modal-header">
+                                <h1>PLANO FAMÍLIA</h1>
+                                <button id="close-modalSLA" class="close-modal">X</button>
+                            </div>
+                            <hr>
+                            <div class="modal-content">
+                                <p>*Instalação Grátis</p>
+                                <p>* Download 150 Mega e Upload 150 Mega</p>
+                                <p>*Wi-Fi 6 inlcuso para trazer mais velocidade</p>
+                                <p>*Plano de Internet 100% Fibra Óptica, ideal para uso residencial, perfeito para
+                                    navegação, estudos, trabalho remoto e consumo de streaming em até 5 dispositivos
+                                    simultâneos.</p>
+                                <p>*Planos disponíveis para áreas urbanas. Consulte viabilidade técnica para
+                                    empresas e
+                                    para
+                                    outras áreas.</p>
+                                <p>Plano com acesso a Streamings Inclusos: <br>
+                                    <strong>Streaming de Filmes e Séries</strong> – Catálogo com milhares de
+                                    títulos,
+                                    incluindo lançamentos, clássicos, séries, documentários e conteúdo infantil.
+                                    <br><strong>Streaming Infantil</strong> – Desenhos, filmes educativos e
+                                    conteúdos
+                                    seguros
+                                    para crianças.
+                                </p>
+                                <p>*Conteúdos disponíveis conforme contrato e disponibilidade da plataforma.</p>
+                                <p>Valor: <strong>R$79,90</strong></p>
+                                <p>*Promoção não acumulativa</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-footer">
+                    <button onclick="paginaCliente()">Contrate agora</button>
+                </div>
+
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+
+    <div class="marcas">
+        <div class="marcas-header">
+            <img src="/imagens/linhaVerde.svg" alt="" width="600px">
+        </div>
+        <div class="marcas-conteiner">
+            <div class="marcas-conteudo">
+                <p>Na More Speed, a segurança e a qualidade dos nossos serviços são prioridades absolutas.
+                    Para garantir a excelência em nossas soluções, contamos com parcerias estratégicas com marcas
+                    líderes do setor de tecnologia.
+                    Trabalhamos com equipamentos de ponta da Datacom, Mikrotik e Huawei, reconhecidas mundialmente por
+                    sua confiabilidade e desempenho.
+                    Essas parcerias nos permitem oferecer aos nossos clientes uma infraestrutura robusta e segura,
+                    garantindo conexões estáveis e
+                    rápidas para atender às demandas do mercado corporativo.
+                </p>
+            </div>
+            <div class="marcas-imagens">
+                <img src="imagens/mikrotik.jpg" alt="" width="200px">
+                <img src="imagens/huawei.svg" alt="" width="200px">
+                <img src="imagens/datacom.svg" alt="" width="200px">
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <div class="confianca">
+        <div class="confianca-header">
+            <h1>Infraestrutura Sólida. Conexão Sem Surpresas</h1>
+            <h2>Na More Speed, trabalhamos com equipamentos de alto desempenho e monitoramento 
+                contínuo para garantir máxima estabilidade, segurança e disponibilidade para sua empresa.
+            </h2>
+        </div>
+        <div class="confianca-conteiner">
+            
+        </div>
+
+    </div>
+
+
+
+    <div class="titulo-form">
+        <img src="imagens/FaleConosco.svg" alt="" width="600px">
+    </div>
+    <div class="contato-geral" id="contato">
+
+        <div class="contato">
+
+            <div class="box-form">
+                <h3>Envie sua Menssagem Para Falar Com um Especialista!</h3>
+                <form action="">
+                    <input type="text" placeholder="Nome Completo" required id="nome">
+                    <input type="email" placeholder="E-mail" required id="email">
+                    <input type="tel" placeholder="Telefone" required id="telefone">
+                    <textarea placeholder="Mensagem" required id="mensagem"></textarea>
+                    <button onclick="enviarMensagemWhatsApp()">Enviar Mensagem</button>
+                </form>
+            </div>
+
+            <div class="maps">
+
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7349.796402964079!2d-43.65575305933995!3d-22.91712532240538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bfb20c20c20bd%3A0x3f02fe70f74d77f5!2sMore%20Speed%20Comunica%C3%A7%C3%B5es%20LTDA.!5e0!3m2!1spt-BR!2sbr!4v1770831190892!5m2!1spt-BR!2sbr"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer" class="footer">
+        <div class="footer-header">
+            <h1>More Speed - Comunicações LTDA</h1>
+            <div class="redes-sociais">
+                <h3>Nos siga nas redes sociais para ficar dentro de tudo</h3>
+                <a href="https://www.instagram.com/morespeed_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                    target="_blank"><img src="imagens/instagram.svg" alt=""> @morespeed_</a>
+                <a href="https://wa.me/5521965655662" target="_blank"><img src="imagens/whatsapp.svg"
+                        alt="">21965655662</a>
+            </div>
+            <hr>
+        </div>
+        <div class="informacoes-footer">
+            <img class="logo-footer"
+                src="https://www.morespeed.com.br/assets/images/logo/logo2023speedfundotransparante.png" width="220px">
+            <div class="informacoes-footer-detalhes">
+                <h3><strong>Informações de Contato</h3>
+                <p><strong>Telefone:</strong> (21) 96565-5662</p>
+                <p><strong>Email Suporte:</strong> suporte@morespeed.com.br</p>
+                <p><strong>Email Financeiro:</strong> financeiro@morespeed.com.br</p>
+                <p><strong>Outros Email:</strong> contato@morespeed.com.br</p>
+                <p><strong>Funcionamento:</strong> Segunda à Sexta, das 09h às 18h. Sábado das 09h às 16h.</p>
+
+            </div>
+            <img src="imagens/anatel.svg" alt="" width="250px">
+        </div>
+
+    </footer>
+
+
+</body>
+
+
+</html>

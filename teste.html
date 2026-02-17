@@ -5,88 +5,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        .hero {
-            min-height: 60vh;
-            background: linear-gradient(135deg,
-                    #0000FA,
-                    #000ADA,
-                    #0014C8,
-                    #001EB4);
-            display: flex;
+    <script src="modalCorporativo.js" defer></script>
+    
+    <style> 
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
             align-items: center;
-            padding: 60px 10%;
-            color: #ffffff;
         }
-
-        .hero-content {
-            max-width: 600px;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            line-height: 1.6;
-            margin-bottom: 30px;
-            color: #e6e6e6;
-        }
-
-        .hero-buttons {
+        
+        .modal{
             display: flex;
-            gap: 15px;
+            flex-direction: column;
+            background-color: white;
+            border-radius: 20px;
+            padding: 20px;
+            width: 400px;
+            height: 500px;
+            max-width: 70%;
+            overflow-y: auto;
+        }
+        .modal-header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .close-modal{
+            background-color: transparent;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        
+        .modal hr{
+            margin: 10px;
         }
 
-        .btn {
-            padding: 14px 28px;
-            border-radius: 8px;
-            font-size: 1rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .btn-primary {
-            background-color: #2ecc71;
-            color: #ffffff;
-        }
-
-        .btn-primary:hover {
-            background-color: #27ae60;
-            transform: translateY(-2px);
-        }
-
-        .btn-secondary {
-            border: 2px solid #ffffff;
-            color: #ffffff;
-        }
-
-        .btn-secondary:hover {
-            background-color: #ffffff;
-            color: #0014C8;
-        }
     </style>
 </head>
 
 <body>
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Internet Fibra Óptica de Verdade</h1>
-            <p>
-                Sem quedas e sem limites.
-                Conectividade estável para jogos, streaming, trabalho e tudo o que importa.
-            </p>
-
-            <div class="hero-buttons">
-                <a href="#planos" class="btn btn-primary">Ver Planos</a>
-                <a href="#contato" class="btn btn-secondary">Falar no WhatsApp</a>
+    <button class="open-modal" id="open-modalFi">Saiba mais</button>
+    <div id="modalFi" class="modal-overlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h1>PLANO FAMÍLIA</h1>
+                <button id="close-modalFi" class="close-modal">X</button>
+            </div>
+            <hr>
+            <div class="modal-content">
+                <p>*Instalação Grátis</p>
+                <p>* Download 150 Mega e Upload 150 Mega</p>
+                <p>*Wi-Fi 6 inlcuso para trazer mais velocidade</p>
+                <p>*Plano de Internet 100% Fibra Óptica, ideal para uso residencial, perfeito para
+                    navegação, estudos, trabalho remoto e consumo de streaming em até 5 dispositivos
+                    simultâneos.</p>
+                <p>*Planos disponíveis para áreas urbanas. Consulte viabilidade técnica para
+                    empresas e
+                    para
+                    outras áreas.</p>
+                <p>Plano com acesso a Streamings Inclusos: <br>
+                    <strong>Streaming de Filmes e Séries</strong> – Catálogo com milhares de
+                    títulos,
+                    incluindo lançamentos, clássicos, séries, documentários e conteúdo infantil.
+                    <br><strong>Streaming Infantil</strong> – Desenhos, filmes educativos e
+                    conteúdos
+                    seguros
+                    para crianças.
+                </p>
+                <p>*Conteúdos disponíveis conforme contrato e disponibilidade da plataforma.</p>
+                <p>Valor: <strong>R$79,90</strong></p>
+                <p>*Promoção não acumulativa</p>
             </div>
         </div>
-    </section>
+    </div>
 
 </body>
 
