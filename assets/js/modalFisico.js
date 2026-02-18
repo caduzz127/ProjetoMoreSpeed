@@ -3,10 +3,9 @@ const openModal = document.getElementById('open-modal1');
 const modal = document.getElementById('modal1');
 const closeModal = document.getElementById('close-modal1');
 
-openModal.addEventListener('click', () => {
+openModal.addEventListener('click', (event) => {
   modal.classList.add('ativo');
 });
-
 
 closeModal.addEventListener('click', () => {
   modal.classList.remove('ativo');

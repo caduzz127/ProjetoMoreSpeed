@@ -58,10 +58,7 @@
     transform: translateY(-5px);
 }
 
-.modal-aberto .card-diferenciais:hover {
-    transform: none !important;
-    transition: none !important;
-}
+
 
 /* IMAGEM */
 .card-img {
@@ -124,6 +121,7 @@
 }
 
 .card-footer button {
+    width: 100%;
     background: none;
     border: none;
     color: white;
@@ -137,7 +135,12 @@
 }
 
 
+
 /* EXPLICAÇÃO DE PLANOS MODAIS*/
+.modal-aberto .card-diferenciais:hover {
+    transform: none !important;
+    transition: none !important;
+}
 
 .modal-overlay {
     display: none;
@@ -148,7 +151,8 @@
     height: 100%;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.241);
+    background: rgba(10, 25, 50, 0.65);
+    backdrop-filter: blur(6px);
     font-family: 'Poppins', sans-serif;
     z-index: 99999;
 }
@@ -158,19 +162,72 @@
 }
 
 .modal {
-    background: #ffffff;
+    background-color: #fffffff6;
     color: #000000;
-    padding: 30px;
-    border-radius: 12px;
+    padding: 35px;
+    border-radius: 16px;
     width: 100%;
-    max-width: 500px;
-    max-height: 500px;
+    max-width: 520px;
+    max-height: 80vh;
     overflow-y: auto;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
-    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Header */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 15px;
+}
+
+.modal-header h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.modal-header button {
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    color: #000000;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 600;
 }
 
 
+
+/* Conteúdo */
+.modal-content {
+    text-align: left;
+    color: #444444;
+}
+
+.modal-content p {
+    line-height: 1.6;
+    font-size: 1rem;
+    margin-bottom: 14px;
+    opacity: 0.9;
+}
+
+/* Animação */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 
 /* MARCAS */
@@ -217,6 +274,8 @@
     background: linear-gradient(135deg, #1e00a8, #2e00ff);
     text-align: center;
     color: white;
+    margin-top: 60px;
+    margin-bottom: 80px;
 }
 
 .confianca-header h1 {
