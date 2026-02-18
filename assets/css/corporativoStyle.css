@@ -14,7 +14,7 @@
     height: auto;
     position: relative;
     aspect-ratio: 2592 / 864;
-    background: url("imagens/v.svg");
+    background: url("../imgs/v.svg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
