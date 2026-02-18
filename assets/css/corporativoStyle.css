@@ -1,10 +1,9 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
 
 
 
@@ -33,7 +32,7 @@
     width: 98%;
     margin: auto;
     margin-top: 40px;
-   
+
 
 }
 
@@ -214,26 +213,44 @@
 
 /* Confianca */
 .confianca {
-    background-color: #1800ad;
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    gap: 24px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    padding: 10px;
-    width: 100%;
-    min-height: 500px;
-}
-.confianca-header{
-    color: #ffffff;
-}
-.confianca-header h1 {
-    font-size: 2.8rem;
-    font-weight: 700;
-    margin-bottom: 5px;
+    padding: 30px 5%;
+    background: linear-gradient(135deg, #1e00a8, #2e00ff);
+    text-align: center;
+    color: white;
 }
 
+.confianca-header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+
+.confianca-header h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+    opacity: 0.9;
+}
+
+.swiper {
+    padding-bottom: 60px;
+    width: 70%;
+}
+
+.swiper-slide {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    background: transparent;
+}
+
+.swiper-slide img {
+    width: 210px;
+    border-radius: 25px;
+
+}
 
 
 
@@ -245,9 +262,9 @@
 }
 
 .contato-geral {
-  
+
     width: 95%;
-   
+
     margin: auto
 }
 
