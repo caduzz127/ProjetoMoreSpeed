@@ -1,9 +1,5 @@
-
-/* Responsive styles for mobile / hamburger menu */
-
-/* Default: no override; specific mobile rules below */
-
 @media (max-width: 900px) {
+
 
     .top-bar {
         flex-direction: column;

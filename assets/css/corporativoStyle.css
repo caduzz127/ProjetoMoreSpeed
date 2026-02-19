@@ -244,18 +244,18 @@
 
 }
 
-.marcas-conteiner .marcas-conteudo {
+.marcas-conteudo {
     max-width: 50%;
     text-align: left;
     margin-left: 55px;
     padding: 10px;
 }
 
-.marcas-conteiner .marcas-conteudo p {
+.marcas-conteudo p {
     color: #000000;
-    font-size: 1.2rem;
-    line-height: 1.5;
-    font-weight: 400;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 8px;
 }
 
 .marcas-imagens {
