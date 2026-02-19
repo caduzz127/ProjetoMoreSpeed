@@ -34,6 +34,8 @@ footer {
     margin-top: 10px;
 }
 
+
+
 .redes-sociais img {
     width: 25px;
 }
@@ -47,6 +49,10 @@ footer {
     text-decoration: none;
     font-size: 18px;
     transition: color 0.3s ease;
+}
+
+.redes-sociais a:hover {
+    text-decoration: underline;
 }
 
 .informacoes-footer {
@@ -64,6 +70,7 @@ footer {
     gap: 20px;
     margin-top: 20px;
 }
+
 .logo-footer {
     margin-bottom: 20px;
 }
