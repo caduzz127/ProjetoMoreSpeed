@@ -91,34 +91,44 @@ window.addEventListener('click', (event) => {
 
 
 
+//Modal para os Planos de Internet
+const openModalInternet300 = document.getElementById('open-modal-plano-de-300');
+const modalInternet300 = document.getElementById('modal-plano-de-300');
+const closeModalInternet300 = document.getElementById('close-modal-plano-de-300');
 
 
-
-
-
-
-
-
-
-
-
-// MODAIS DO CORPORATIVO AGORA APENAS INFORMAÇÕES
-const openModalF = document.getElementById('open-modalFi');
-const modalF = document.getElementById('modalFi');
-const closeModalF = document.getElementById('close-modalFi');
-
-console.log(openModalF, modalF, closeModalF);
-
-openModalF.addEventListener('click', () => {
-  modalF.classList.add('ativo');
+openModalInternet300.addEventListener('click', () => {
+  modalInternet300.classList.add('ativo');
 });
 
-closeModalF.addEventListener('click', () => {
-  modalF.classList.remove('ativo');
+closeModalInternet300.addEventListener('click', () => {
+  modalInternet300.classList.remove('ativo');
 });
 
 window.addEventListener('click', (event) => {
-  if (event.target === modalF) {
-    modalF.classList.remove('ativo');
+  if (event.target === modalInternet300) {
+    modalInternet300.classList.remove('ativo');
+  }
+});
+
+
+
+
+const openModalInternet450 = document.getElementById('open-modal-plano-de-450');
+const modalInternet450 = document.getElementById('modal-plano-de-450');
+const closeModalInternet450 = document.getElementById('close-modal-plano-de-450');
+
+console.log(openModalInternet450,modalInternet450,closeModalInternet450);
+openModalInternet450.addEventListener('click', () => {
+  modalInternet450.classList.add('ativo');
+});
+
+closeModalInternet450.addEventListener('click', () => {
+  modalInternet450.classList.remove('ativo');
+});
+
+window.addEventListener('click', (event) => {
+  if (event.target === modalInternet450) {
+    modalInternet450.classList.remove('ativo');
   }
 });
