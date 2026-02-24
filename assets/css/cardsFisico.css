@@ -546,13 +546,10 @@
     border-radius: 18px;
     margin: auto;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
 }
 
-.card-conteiner-conteudo {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
+
 
 .card-conteiner-header {
     background: linear-gradient(180deg, #2b19ff, #2301ff);
@@ -577,6 +574,13 @@
     font-size: 28px;
     letter-spacing: 1px;
 }
+
+.card-conteiner-conteudo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
 .so-internet {
     margin-left: 30px;
     font-size: 14px;
