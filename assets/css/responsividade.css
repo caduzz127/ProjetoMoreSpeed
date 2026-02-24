@@ -4,6 +4,13 @@
 
 @media (max-width: 900px) {
 
+    .action-contato img {
+        width: 30px;
+    }
+
+    .action-contato-loc img {
+        width: 20px;
+    }
 
     .background {
         width: 100%;
@@ -48,7 +55,7 @@
     }
 
     /*CONTATO*/
-    .titulo-form img{
+    .titulo-form img {
         width: 100%;
     }
 
@@ -58,7 +65,7 @@
         align-items: center;
     }
 
-    
+
 
     /*FOOTER*/
     .footer {
@@ -76,8 +83,5 @@
     .informacoes-footer-detalhes {
         text-align: center;
     }
-   
+
 }
-
-
-

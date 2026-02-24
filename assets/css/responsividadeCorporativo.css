@@ -42,13 +42,12 @@
     }
 
     .marcas-conteudo p {
-
         padding: 0;
         width: 100%;
-        min-width: 400px;
-       
+        min-width: 300px;
         max-width: 100%;
         box-sizing: border-box;
+
     }
     
     .marcas-imagens{
