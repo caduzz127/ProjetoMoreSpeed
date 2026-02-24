@@ -1,11 +1,23 @@
 @media (max-width: 900px) {
 
-
-    .top-bar {
+    .top-bar{
         flex-direction: column;
+        gap: 12px;
         align-items: center;
-        gap: 8px;
     }
+
+
+    .action-contato, .action-contato-loc{
+        font-size: 15px;
+    }
+    .action-contato img {
+        width: 30px;
+    }
+
+    .action-contato-loc img {
+        width: 20px;
+    }
+
 
     .container {
         padding: 0 12px;

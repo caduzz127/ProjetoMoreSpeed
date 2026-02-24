@@ -3,7 +3,7 @@ const planoPremium = document.getElementById('planos-premium');
 
 const internet = document.getElementById('btn-internet');
 const planoInternet = document.getElementById('planos-internet');
-console.log(premium, internet,planoInternet,planoPremium)
+
 premium.addEventListener('click', (event) =>{
     premium.classList.add("ativo");
     premium.classList.remove("inativo")
@@ -14,6 +14,7 @@ premium.addEventListener('click', (event) =>{
     internet.classList.remove("ativo");
    
 });
+
 internet.addEventListener('click', (event)=>{
     internet.classList.add("ativo");
     internet.classList.remove("inativo");

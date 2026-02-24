@@ -3,14 +3,7 @@
 /* Default: no override; specific mobile rules below */
 
 @media (max-width: 900px) {
-
-    .action-contato img {
-        width: 30px;
-    }
-
-    .action-contato-loc img {
-        width: 20px;
-    }
+    
 
     .background {
         width: 100%;
