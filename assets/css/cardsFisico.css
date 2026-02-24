@@ -550,6 +550,7 @@
 
 .card-conteiner-header {
     position: relative;
+    width: 100%;
     height: 90px;
     background: linear-gradient(180deg, #2b19ff, #2301ff);
     color: white;
