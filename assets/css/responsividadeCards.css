@@ -1,5 +1,4 @@
-@media (max-width: 900px) {
-
+@media (max-width: 900px) and (max-width: 1023px) {
     /* CARDS: make planos layout responsive */
     .planos {
         display: flex;
@@ -8,13 +7,11 @@
         gap: 20px;
         justify-content: center;
     }
-
     .card-complete {
         flex: 1 1 320px;
         max-width: 380px;
         min-width: 260px;
     }
-
     .card-header-titulo img.promo,
     .card-header-titulo img {
         width: 100%;
@@ -24,20 +21,17 @@
     }
 }
 
-
 @media (max-width: 700px) {
     .planos {
         flex-direction: column;
         align-items: center;
     }
-
     .card-complete {
         flex: 1 1 100%;
         max-width: 720px;
         min-width: 0;
         width: 100%;
     }
-
     .card-header-titulo img.promo,
     .card-header-titulo img {
         max-width: 100%;

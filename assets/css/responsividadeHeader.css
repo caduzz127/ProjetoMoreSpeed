@@ -1,22 +1,16 @@
-@media (max-width: 900px) {
-
-    .top-bar{
+@media (max-width: 900px) and (max-width: 1023px) {
+    .top-bar {
         flex-direction: column;
         gap: 12px;
         align-items: center;
     }
-
-
-    .action-contato, .action-contato-loc{
+    .action-contato,
+    .action-contato-loc {
         font-size: 15px;
     }
-    
-
-
     .container {
         padding: 0 12px;
     }
-
     /* show hamburger button */
     .actions .hamburger {
         display: flex;
@@ -27,7 +21,6 @@
         background: transparent;
         border-radius: 8px;
     }
-
     /* hamburger bars */
     .actions .hamburger span {
         display: block;
@@ -37,7 +30,6 @@
         border-radius: 2px;
         transition: transform .25s ease, opacity .25s ease;
     }
-
     /* stack header items compactly */
     .nav {
         position: absolute;
@@ -53,7 +45,6 @@
         opacity: 0;
         pointer-events: none;
     }
-
     .nav .navbar {
         display: none;
         flex-direction: column;
@@ -61,57 +52,46 @@
         align-items: stretch;
         width: 100%;
     }
-
     /* when open, show the menu */
     .nav.open {
         opacity: 1;
         pointer-events: auto;
         transform: translateY(0);
     }
-
     .nav.open .navbar {
         display: flex;
     }
-
     /* menu items full width for easier touch */
     .items-header {
         width: 100%;
         text-align: center;
         border-bottom: 1px solid rgb(255, 255, 255);
     }
-
     .items-header a {
         display: block;
         padding: 12px 8px;
         font-size: 18px;
     }
-
     /* hamburger active -> transform to X */
     .actions .hamburger.active span:nth-child(1) {
         transform: translateY(9px) rotate(45deg);
     }
-
     .actions .hamburger.active span:nth-child(2) {
         opacity: 0;
     }
-
     .actions .hamburger.active span:nth-child(3) {
         transform: translateY(-9px) rotate(-45deg);
     }
-
     /* adjust some header spacing for mobile */
     .nav {
         margin-left: 0;
     }
-
     ul {
         margin-left: 0;
     }
-
     .logo img {
         width: 100px;
     }
-
     .actions {
         gap: 8px;
     }

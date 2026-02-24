@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -7,9 +6,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
-
 .background {
-
     width: 100%;
     height: auto;
     position: relative;
@@ -20,15 +17,11 @@
     background-repeat: no-repeat;
 }
 
-
-
-
 .confianca {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     width: 90%;
     margin: auto;
     margin-top: 60px;
@@ -44,7 +37,6 @@
 }
 
 .confianca-titulo h1 {
-
     font-size: 2.5rem;
     text-shadow: 0 0 20px rgba(124, 255, 0, 0.3);
 }
@@ -64,7 +56,6 @@
     align-items: center;
     justify-content: center;
     padding: 10px 0;
-
 }
 
 .confianca-imgs div {
@@ -83,13 +74,13 @@
 }
 
 
-
 /* PERGUNTAS FREQUENTES */
-#fac{
+
+#fac {
     scroll-margin-top: 120px;
 }
+
 .fac {
-  
     display: flex;
     flex-direction: row;
     gap: 20px;
@@ -99,10 +90,7 @@
     margin-top: 100px;
     margin-left: auto;
     margin-right: auto;
-    
 }
-
-
 
 .box-fac {
     margin-left: 20px;
@@ -116,8 +104,6 @@
     margin-bottom: 20px;
     color: #1800ad;
 }
-
-
 
 .fac-perguntas {
     list-style: none;
@@ -177,13 +163,12 @@
 }
 
 
-
-
-
 /* SOBRE */
+
 #sobre {
     scroll-margin-top: 120px;
 }
+
 .sobre {
     background: #FAFAFA;
     display: flex;
@@ -198,7 +183,6 @@
 
 .sobre-imagem {
     display: flex;
-
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
@@ -233,22 +217,14 @@
 }
 
 
-
-
-
-
-
-
-
 /* CONTATO */
+
 #contato {
     scroll-margin-top: 120px;
 }
 
 .contato-geral {
-  
     width: 95%;
-   
     margin: auto
 }
 
@@ -256,8 +232,7 @@
     color: #444;
     font-size: 1.1rem;
     max-width: 100%;
-   margin-left: 20px ;
-
+    margin-left: 20px;
 }
 
 .titulo-form h1 {
@@ -268,21 +243,15 @@
 }
 
 .contato {
-
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     gap: 40px;
     width: 100%;
     padding: 40px 20px 20px 20px;
     padding-bottom: 60px;
     min-height: 200px;
     align-items: center;
-
 }
-
-
-
-
 
 .box-form {
     max-width: 500px;
@@ -292,7 +261,6 @@
     border: 1px solid rgba(123, 255, 0, 0.438);
     border-radius: 12px;
     padding: 20px;
-
     transition: all 0.3s ease;
     text-align: center;
 }
@@ -372,7 +340,6 @@ form button:active {
     flex: 1;
     border-radius: 15px;
     overflow: hidden;
-   
     border: 1px solid rgba(124, 255, 0, 0.2);
     width: 100%;
     height: 500px;
@@ -384,4 +351,66 @@ form button:active {
     height: auto;
     display: block;
     border: 0;
+}
+
+@media(max-width: 1023px) {
+    .background {
+        width: 100%;
+        background-image: url("../imgs/inMobile.png");
+        background-size: contain;
+        background-position: center top;
+        background-repeat: no-repeat;
+        aspect-ratio: 1024 / 1536;
+    }
+    /*SOBRE*/
+    .sobre {
+        flex-direction: column;
+        gap: 18px;
+        padding: 18px;
+        align-items: center;
+    }
+    .sobre-imagem {
+        width: 100%;
+        max-width: 820px;
+        display: flex;
+        justify-content: center;
+    }
+    .sobre-imagem img {
+        width: 100%;
+        max-width: 820px;
+        height: auto;
+        border-radius: 12px;
+        object-fit: cover;
+        display: block;
+    }
+    .sobre-texto {
+        width: 100%;
+        max-width: 920px;
+        margin-left: 0;
+        text-align: left;
+        font-size: 1rem;
+    }
+    /*CONTATO*/
+    .titulo-form img {
+        width: 100%;
+    }
+    .contato {
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+    }
+    /*FOOTER*/
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+    .informacoes-footer {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .informacoes-footer-detalhes {
+        text-align: center;
+    }
 }
