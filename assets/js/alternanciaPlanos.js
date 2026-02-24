@@ -12,10 +12,7 @@ premium.addEventListener('click', (event) =>{
     
     internet.classList.add("inativo");
     internet.classList.remove("ativo");
-    console.log("está com o premium ativo")
-
-
-
+   
 });
 internet.addEventListener('click', (event)=>{
     internet.classList.add("ativo");
@@ -25,7 +22,6 @@ internet.addEventListener('click', (event)=>{
 
     premium.classList.add("inativo");
     premium.classList.remove("ativo");
-    console.log("está com o internet ativo")
 });
 
 

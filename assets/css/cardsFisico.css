@@ -557,9 +557,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
     border-bottom-left-radius: 18px;
     border-bottom-right-radius: 18px;
-    margin-bottom: 20px;
+    
 }
 
 .card-conteiner-header h1 {
@@ -573,6 +574,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    padding-top: 30px;
 }
 
 .so-internet {
