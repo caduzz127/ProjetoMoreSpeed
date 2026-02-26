@@ -183,6 +183,7 @@ ul {
         height: 44px;
         background: transparent;
         border-radius: 8px;
+        margin-top: auto;
     }
     /* hamburger bars */
     .actions .hamburger span {
