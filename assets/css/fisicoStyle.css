@@ -172,7 +172,7 @@
 .sobre {
     background: #FAFAFA;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     gap: 20px;
     margin: 0 auto;
     margin-bottom: 10%;
@@ -393,6 +393,7 @@ form button:active {
     /*CONTATO*/
     .titulo-form img {
         width: 100%;
+        max-width: 400px;
     }
     .contato {
         flex-direction: column;
