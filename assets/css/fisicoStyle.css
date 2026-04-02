@@ -20,7 +20,7 @@
 
 .rede-mesh {
     background-color: #1800ad;
-    height: 400px;
+    height: auto;
     display: flex;
     flex-direction: row;
     gap: 100px;
