@@ -7,13 +7,35 @@
 
 .background-corporativo {
     width: 100%;
-    height: auto;
     position: relative;
     aspect-ratio: 2592 / 864;
-    background: url("../imgs/v.svg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.background-corporativo picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.bg-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.background picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.bg-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .diferenciais {
@@ -440,13 +462,10 @@ form button:active {
 
 @media (max-width: 1023px) {
     .background-corporativo {
-        width: 100%;
-        background-image: url("../imgs/imagemResponsivaCorporativo.png");
-        background-size: contain;
-        background-position: center top;
-        background-repeat: no-repeat;
         aspect-ratio: 1024 / 1536;
+        
     }
+    
     .cards {
         display: flex;
         flex-direction: column;

@@ -9,13 +9,22 @@
 
 .background {
     width: 100%;
-    height: auto;
     position: relative;
     aspect-ratio: 2592 / 864;
-    background: url("../imgs/innnn.svg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.background picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.bg-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .rede-mesh {
@@ -51,7 +60,7 @@
 .mesh-header h3 {
     font-size: 1.5rem;
     text-shadow: 0 0 20px rgba(124, 255, 0, 0.3);
-   margin-left: 10px;
+    margin-left: 10px;
 }
 
 .mesh-content {
@@ -62,6 +71,7 @@
     color: #FAFAFA;
     margin-left: 15px;
 }
+
 .mesh-gif {
     display: flex;
     align-items: center;
@@ -414,14 +424,29 @@ form button:active {
     border: 0;
 }
 
-@media(max-width: 1023px) {
+@media(max-width: 1024px) {
+
     .background {
-        width: 100%;
-        background-image: url("../imgs/innMobile.png");
-        background-size: contain;
-        background-position: center top;
-        background-repeat: no-repeat;
         aspect-ratio: 1024 / 1536;
+        
+    }
+
+
+    .rede-mesh {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .mesh-container {
+        width: 100%;
+    }
+
+    .fac,
+    .box-fac {
+        margin-left: 0;
     }
 
     /*SOBRE*/
