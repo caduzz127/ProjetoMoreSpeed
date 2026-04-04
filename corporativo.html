@@ -14,9 +14,10 @@
         <link rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
 
+        <script src="assets/js/abrirModalOtimizado.js" defer></script>
         <script src="assets/js/menuHamburguerC.js" defer></script>
         <script src="assets/js/fixacaoHeader.js" defer></script>
-        <script src="assets/js/modalCorporativo.js" defer></script>
+        
         <script type="module" src="assets/js/carrossel.js" defer></script>
 
     </head>
@@ -105,8 +106,36 @@
 
                     <div class="card-content">
                         <h3>Link Dedicado</h3>
-                        <button class="open-modal" id="open-modal-dedicado">Saiba mais</button>
+                        <button class="open-modal" data-modal="modal-dedicado">Saiba mais</button>
+                        <div id="modal-dedicado" class="modal-overlay">
+                            <div class="modal">
+                                <div class="modal-header">
+                                    <h1>LINK DEDICADO</h1>
+                                    <button data-modal="modal-dedicado" class="close-modal">X</button>
+                                </div>
 
+                                <div class="modal-content">
+                                    <p>Conectividade exclusiva, estável e de
+                                        alta
+                                        performance para o seu negócio.</p>
+                                    <p>Com banda garantida e velocidade
+                                        simétrica, o Link
+                                        Dedicado oferece máxima estabilidade,
+                                        baixa latência
+                                        e desempenho contínuo, ideal para
+                                        empresas que não
+                                        podem parar.</p>
+                                    <p>Tenha mais segurança nas operações,
+                                        melhor desempenho
+                                        em sistemas na nuvem, videoconferências
+                                        sem
+                                        interrupções e total confiabilidade para
+                                        suas
+                                        atividades críticas.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="card-footer">
@@ -364,48 +393,25 @@
                     src="https://www.morespeed.com.br/assets/images/logo/logo2023speedfundotransparante.png"
                     width="220px">
                 <div class="informacoes-footer-detalhes">
-                    <h3><strong>Informações de Contato</h3>
-                        <p><strong>Telefone:</strong> (21) 96565-5662</p>
-                        <p><strong>Email Suporte:</strong>
-                            suporte@morespeed.com.br</p>
-                        <p><strong>Email Financeiro:</strong>
-                            financeiro@morespeed.com.br</p>
-                        <p><strong>Outros Email:</strong>
-                            contato@morespeed.com.br</p>
-                        <p><strong>Funcionamento:</strong> Segunda à Sexta, das
-                            09h às 18h. Sábado das 09h às 16h.</p>
+                    <h3><strong>Informações de Contato</strong></h3>
+                    <p><strong>Telefone:</strong> (21) 96565-5662</p>
+                    <p><strong>Email Suporte:</strong>
+                        suporte@morespeed.com.br</p>
+                    <p><strong>Email Financeiro:</strong>
+                        financeiro@morespeed.com.br</p>
+                    <p><strong>Outros Email:</strong>
+                        contato@morespeed.com.br</p>
+                    <p><strong>Funcionamento:</strong> Segunda à Sexta, das
+                        09h às 18h. Sábado das 09h às 16h.</p>
 
-                    </div>
-                    <img src="assets/imgs/anatel.svg" alt width="250px">
                 </div>
-
-            </footer>
-
-            <!-- LINK DEDICADO -->
-            <div id="modal-dedicado" class="modal-overlay">
-                <div class="modal">
-                    <div class="modal-header">
-                        <h1>LINK DEDICADO</h1>
-                        <button id="close-modal-dedicado"
-                            class="close-modal">X</button>
-                    </div>
-
-                    <div class="modal-content">
-                        <p>Conectividade exclusiva, estável e de alta
-                            performance para o seu negócio.</p>
-                        <p>Com banda garantida e velocidade simétrica, o Link
-                            Dedicado oferece máxima estabilidade, baixa latência
-                            e desempenho contínuo, ideal para empresas que não
-                            podem parar.</p>
-                        <p>Tenha mais segurança nas operações, melhor desempenho
-                            em sistemas na nuvem, videoconferências sem
-                            interrupções e total confiabilidade para suas
-                            atividades críticas.
-                        </p>
-                    </div>
-                </div>
+                <img src="assets/imgs/anatel.svg" alt width="250px">
             </div>
 
-        </body>
+        </footer>
 
-    </html>
+        <!-- LINK DEDICADO -->
+
+    </body>
+
+</html>

@@ -378,7 +378,6 @@
 
 
 /* EXPLICAÇÃO DE PLANOS MODELS*/
-
 .modal-overlay {
     display: none;
     position: fixed;
@@ -389,7 +388,6 @@
     top: 0;
     left: 0;
     background: rgba(10, 25, 50, 0.65);
-    backdrop-filter: blur(6px);
     font-family: 'Poppins', sans-serif;
     z-index: 99999;
 }
