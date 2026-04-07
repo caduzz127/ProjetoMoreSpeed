@@ -14,6 +14,7 @@
         <link rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
 
+        <script src="assets/js/mensagens.js" defer></script>
         <script src="assets/js/abrirModalOtimizado.js" defer></script>
         <script src="assets/js/menuHamburguerC.js" defer></script>
         <script src="assets/js/fixacaoHeader.js" defer></script>
@@ -348,17 +349,16 @@
 
                 <div class="box-form">
                     <h3>Envie sua Menssagem Para Falar Com um Especialista!</h3>
-                    <form action>
-                        <input type="text" placeholder="Nome Completo" required
-                            id="nome">
+                    <form>
+                        <input type="text" placeholder="Nome Da Empresa" required
+                            id="nomeC">
                         <input type="email" placeholder="E-mail" required
-                            id="email">
+                            id="emailC">
                         <input type="tel" placeholder="Telefone" required
-                            id="telefone">
+                            id="telefoneC">
                         <textarea placeholder="Mensagem" required
-                            id="mensagem"></textarea>
-                        <button onclick="enviarMensagemWhatsApp()">Enviar
-                            Mensagem</button>
+                            id="mensagemC"></textarea>
+                        <button onclick="enviarMensagemWhatsAppCorporativo()">Enviar Mensagem</button>
                     </form>
                 </div>
 
