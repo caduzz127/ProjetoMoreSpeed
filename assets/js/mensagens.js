@@ -68,3 +68,20 @@ function enviarMensagemWhatsAppCorporativo() {
     const url = `https://wa.me/${telefoneSuporteCorporativo}?text=${encodeURIComponent(mensagemCorporativo)}`;
     window.open(url, '_blank');
 }
+
+function enviarMensagemLinkDedicado() {
+    const url = `https://wa.me/${telefoneSuporteCorporativo}?text=${encodeURIComponent("Gostaria de informações sobre o Link Dedicado.")}`;
+    window.open(url, '_blank');
+}
+function enviarMensagemAtendimento(){
+    const url = `https://wa.me/${telefoneSuporteCorporativo}?text=${encodeURIComponent("Gostaria de informações sobre o Atendimento Especializado da Empresa.")}`;
+    window.open(url, '_blank');
+}
+function enviarMensagemVoIP() {
+    const url = `https://wa.me/${telefoneSuporteCorporativo}?text=${encodeURIComponent("Gostaria de informações sobre o VoIP.")}`;
+    window.open(url, '_blank');
+}
+function enviarMensagemSLA() {
+    const url = `https://wa.me/${telefoneSuporteCorporativo}?text=${encodeURIComponent("Gostaria de informações sobre o SLA garantido.")}`;
+    window.open(url, '_blank');
+}
