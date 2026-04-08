@@ -1,6 +1,7 @@
 html {
-  color-scheme: light;
+    color-scheme: light;
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -238,6 +239,7 @@ html {
         opacity: 0;
         transform: translateY(-20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -255,7 +257,6 @@ html {
     display: flex;
     flex-direction: row;
     gap: 70px;
-    flex-wrap: wrap;
 }
 
 .marcas-conteudo {
@@ -461,23 +462,26 @@ form button:active {
     border: 0;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
     .background-corporativo {
         aspect-ratio: 1024 / 1536;
-        
+
     }
-    
+
     .cards {
         display: flex;
         flex-direction: column;
     }
+
     .marcas {
         width: 100%;
     }
+
     .marcas-header img {
         width: 95%;
         height: auto;
     }
+
     .marcas-conteiner {
         display: flex;
         flex-direction: column;
@@ -486,22 +490,28 @@ form button:active {
         margin: 0;
         width: 100%;
     }
+
     .marcas-conteudo {
-        align-items: left;
-        text-align: left;
-        margin-left: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
         width: 100%;
+        margin: auto;
     }
+
     .marcas-conteudo p {
+        align-items: center;
+        text-align: center;
         padding: 0;
         width: 100%;
         min-width: 300px;
         max-width: 100%;
-        box-sizing: border-box;
     }
+
     .marcas-imagens {
         margin: auto;
     }
+
     .titulo-form img {
         width: 95%;
         height: auto;
@@ -511,6 +521,7 @@ form button:active {
     .titulo-form img {
         width: 100%;
     }
+
     .contato {
         flex-direction: column;
         gap: 12px;
