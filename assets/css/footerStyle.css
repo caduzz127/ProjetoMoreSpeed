@@ -53,6 +53,7 @@ html {
 
 .redes-sociais a:hover {
     text-decoration: underline;
+    color: chartreuse;
 }
 
 .informacoes-footer {

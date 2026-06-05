@@ -25,23 +25,23 @@ function enviarMensagemWhatsApp() {
 
 
 
-const plano200 = "Eu gostaria de Saber mais sobre o Plano de 200 Megas. Estou vindo pelo site";
-const plano300 = "Eu gostaria de Saber mais sobre o Plano de 300 Megas. Estou vindo pelo site";
-const plano450 = "Eu gostaria de Saber mais sobre o Plano de 450 Megas. Estou vindo pelo site";
+const planoIndividual = "Eu gostaria de Saber mais sobre o Plano Individual. Estou vindo pelo site";
+const planoFamilia = "Eu gostaria de Saber mais sobre o Plano Familia. Estou vindo pelo site";
+const planoFamiliaPlus = "Eu gostaria de Saber mais sobre o Plano Familia+. Estou vindo pelo site";
 const plano800 = "Eu gostaria de Saber mais sobre o Plano de 800 Megas. Estou vindo pelo site";
 
-function AssinarPlano200() {
-    const url = `https://wa.me/${telefoneInstalacao}?text=${encodeURIComponent(plano200)}`;
+function AssinarPlanoIndividual() {
+    const url = `https://wa.me/${telefoneInstalacao}?text=${encodeURIComponent(planoIndividual)}`;
     window.open(url, '_blank');
 }
 
-function AssinarPlano300() {
-    const url = `https://wa.me/${telefoneInstalacao}?text=${encodeURIComponent(plano300)}`;
+function AssinarPlanoFamilia() {
+    const url = `https://wa.me/${telefoneInstalacao}?text=${encodeURIComponent(planoFamilia)}`;
     window.open(url, '_blank');
 }
 
-function AssinarPlanoAvancado() {
-    const url = `https://wa.me/${telefoneInstalacao}?text=${encodeURIComponent(plano450)}`;
+function AssinarPlanoFamiliaPlus() {
+    const url = `https://wa.me/${telefoneInstalacao}?text=${encodeURIComponent(planoFamiliaPlus)}`;
     window.open(url, '_blank');
 }
 

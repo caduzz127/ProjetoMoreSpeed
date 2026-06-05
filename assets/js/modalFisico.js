@@ -132,3 +132,24 @@ window.addEventListener('click', (event) => {
     modalInternet450.classList.remove('ativo');
   }
 });
+
+
+
+const openModalInternet500 = document.getElementById('open-modal-plano-familia+');
+const modalInternet500 = document.getElementById('modal-plano-familia+');
+const closeModalInternet500 = document.getElementById('close-modal-plano-familia+');
+
+console.log(openModalInternet500,modalInternet500,closeModalInternet500);
+openModalInternet500.addEventListener('click', () => {
+  modalInternet500.classList.add('ativo');
+});
+
+closeModalInternet500.addEventListener('click', () => {
+  modalInternet500.classList.remove('ativo');
+});
+
+window.addEventListener('click', (event) => {
+  if (event.target === modalInternet500) {
+    modalInternet500.classList.remove('ativo');
+  }
+});
