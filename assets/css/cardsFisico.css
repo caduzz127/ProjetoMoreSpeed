@@ -2,6 +2,13 @@ html {
     color-scheme: light;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
 /* PLANOS COM ASSINATURAS */
 
 .conteudo-planos {
@@ -44,77 +51,15 @@ html {
     gap: 42px;
 }
 
-.alternancia-de-planos {
-    position: relative;
-    width: 320px;
-    margin: 30px auto;
-    display: flex;
-    background: linear-gradient(135deg, #1e3cff, #0b57ff);
-    border-radius: 50px;
-    padding: 5px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-.btn-alternancia-premium,
-.btn-alternancia-internet {
-    flex: 1;
-    padding: 10px 0;
-    border: none;
-    background: transparent;
-    color: white;
-    font-weight: 600;
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 50px;
-    z-index: 2;
-    transition: color 0.3s ease;
-}
-
-
-/*Vai começar com o backgound verde, pois ele já é ativo, só ficará inativo quando ouver o clique*/
-
-.btn-alternancia-premium {
-    background-color: #7CFF00;
-    color: #000000;
-}
-
-.btn-alternancia-premium.ativo {
-    background-color: #7CFF00;
-    color: #000000;
-}
-
-.btn-alternancia-internet.ativo {
-    background-color: #7CFF00;
-    color: #000000;
-}
-
-.btn-alternancia-premium.inativo {
-    background: transparent;
-    color: white;
-}
-
-.btn-alternancia-internet.inativo {
-    background: transparent;
-    color: white;
-}
-
-
-/* -------------------------------------------------------------------------------------------------- */
-
-.planos-premium {
-    display: flex;
-    justify-content: center;
-    gap: 42px;
-    flex-wrap: wrap;
-    padding-top: 100px;
-}
-
-.planos-premium.inativo {
-    display: none;
-}
-
-
 /* Wi-fi animation */
+
+
+.wifi-icon-cards {
+    margin-right: 30px;
+    margin-top: 5px;
+    padding-bottom: 30px;
+    transform: rotate(12deg);
+}
 
 .wifi-icon {
     transform: rotate(12deg);
@@ -193,6 +138,78 @@ html {
 }
 
 
+/*Vai começar com o backgound verde, pois ele já é ativo, só ficará inativo quando ouver o clique*/
+
+.alternancia-de-planos {
+    position: relative;
+    width: 320px;
+    margin: 30px auto;
+    display: flex;
+    background: linear-gradient(135deg, #1e3cff, #0b57ff);
+    border-radius: 50px;
+    padding: 5px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn-alternancia-premium,
+.btn-alternancia-internet {
+    flex: 1;
+    padding: 10px 0;
+    border: none;
+    background: transparent;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 50px;
+    z-index: 2;
+    transition: color 0.3s ease;
+}
+
+.btn-alternancia-premium {
+    background-color: #7CFF00;
+    color: #000000;
+}
+
+.btn-alternancia-premium.ativo {
+    background-color: #7CFF00;
+    color: #000000;
+}
+
+.btn-alternancia-internet.ativo {
+    background-color: #7CFF00;
+    color: #000000;
+}
+
+.btn-alternancia-premium.inativo {
+    background: transparent;
+    color: white;
+}
+
+.btn-alternancia-internet.inativo {
+    background: transparent;
+    color: white;
+}
+
+
+/* -------------------------------------------------------------------------------------------------- */
+
+.planos-premium {
+    display: flex;
+    justify-content: center;
+    gap: 42px;
+    flex-wrap: wrap;
+    padding-top: 100px;
+}
+
+.planos-premium.inativo {
+    display: none;
+}
+
+
+
+
+
 
 .card-complete {
     display: flex;
@@ -214,11 +231,12 @@ html {
     display: block;
 }
 
-.card-header-informacao{
+.card-header-informacao {
     margin-top: 10px;
     margin-bottom: 25px;
 }
-.card-header-informacao h2{
+
+.card-header-informacao h2 {
     font-size: 1.6rem;
     color: #050F28;
     font-weight: 600;
@@ -233,14 +251,6 @@ html {
     overflow: hidden;
 }
 
-
-
-.wifi-icon-cards {
-    margin-right: 30px;
-    margin-top: 5px;
-    padding-bottom: 30px;
-    transform: rotate(12deg);
-}
 
 .nome-plano {
     margin-top: 15px;
@@ -371,6 +381,56 @@ html {
     outline: none;
 }
 
+.navegacao-premium {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.dots-premium {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.dott-premium {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #cfcfcf;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.dott-premium.ativo {
+    background: #003BFF;
+}
+
+.progress-bar-premium {
+    width: 250px;
+    height: 3px;
+    background: #e0e0e0;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+#progressFillPremium {
+    width: 0%;
+    height: 100%;
+    background: #003BFF;
+    transition: width .1s linear;
+}
+
+.seta {
+    border: none;
+    background: none;
+    font-size: 28px;
+    cursor: pointer;
+}
 
 /* EXPLICAÇÃO DE PLANOS MODELS*/
 .modal-overlay {
@@ -476,12 +536,6 @@ html {
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
 
 /* ── Wrapper externo para centralizar tudo ── */
 .planos-internet-wrapper {
