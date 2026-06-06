@@ -28,7 +28,12 @@ function enviarMensagemWhatsApp() {
 const planoIndividual = "Eu gostaria de Saber mais sobre o Plano Individual. Estou vindo pelo site";
 const planoFamilia = "Eu gostaria de Saber mais sobre o Plano Familia. Estou vindo pelo site";
 const planoFamiliaPlus = "Eu gostaria de Saber mais sobre o Plano Familia+. Estou vindo pelo site";
-const plano800 = "Eu gostaria de Saber mais sobre o Plano de 800 Megas. Estou vindo pelo site";
+
+//Planos Performance
+const planoHomeOffice = "Eu gostaria de Saber mais sobre o Plano de 1 GIGA do Home Office. Estou vindo pelo site";
+const planoGamer = "Eu gostaria de Saber mais sobre o Plano Gamer Normal de 600 Mega. Estou vindo pelo site";
+const planoGamerPlus = "Eu gostaria de Saber mais sobre o Plano Gamer Plus de 800 Mega. Estou vindo pelo site";
+const planoStreamer = "Eu gostaria de Saber mais sobre o Plano Streamer. Estou vindo pelo site";
 
 function AssinarPlanoIndividual() {
     const url = `https://wa.me/${telefoneInstalacao}?text=${encodeURIComponent(planoIndividual)}`;
@@ -45,8 +50,23 @@ function AssinarPlanoFamiliaPlus() {
     window.open(url, '_blank');
 }
 
-function AssinarPlanoPremium() {
-    const url = `https://wa.me/${telefoneInstalacao}?text=${encodeURIComponent(plano800)}`;
+
+//PLANOS DE PERFORMANCE
+
+function AssinarPlanoHomeOffice() {
+    const url = `https://wa.me/${telefoneInstalacao}?text=${encodeURIComponent(planoHomeOffice)}`;
+    window.open(url, '_blank');
+}
+function AssinarPlanoGamer() {
+    const url = `https://wa.me/${telefoneInstalacao}?text=${encodeURIComponent(planoGamer)}`;
+    window.open(url, '_blank');
+}
+function AssinarPlanoGamerPlus() {
+    const url = `https://wa.me/${telefoneInstalacao}?text=${encodeURIComponent(planoGamerPlus)}`;
+    window.open(url, '_blank');
+}
+function AssinarPlanoStreamer() {
+    const url = `https://wa.me/${telefoneInstalacao}?text=${encodeURIComponent(planoStreamer)}`;
     window.open(url, '_blank');
 }
 

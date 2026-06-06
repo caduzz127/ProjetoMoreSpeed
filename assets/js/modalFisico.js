@@ -1,7 +1,7 @@
 // MODAL 1 - Plano Família 1
-const openModal = document.getElementById('open-modal1');
-const modal = document.getElementById('modal1');
-const closeModal = document.getElementById('close-modal1');
+const openModal = document.getElementById('open-modal-home');
+const modal = document.getElementById('modal-plano-home');
+const closeModal = document.getElementById('close-modal-plano-home');
 
 openModal.addEventListener('click', (event) => {
   modal.classList.add('ativo');
@@ -20,9 +20,9 @@ window.addEventListener('click', (event) => {
 
 
   // MODAL 2 - Plano Família 2
-const openModal2 = document.getElementById('open-modal2');
-const modal2 = document.getElementById('modal2');
-const closeModal2 = document.getElementById('close-modal2');
+const openModal2 = document.getElementById('open-modal-gamer');
+const modal2 = document.getElementById('modal-plano-gamer');
+const closeModal2 = document.getElementById('close-modal-plano-gamer');
 
 openModal2.addEventListener('click', () => {
   modal2.classList.add('ativo');
@@ -41,9 +41,9 @@ window.addEventListener('click', (event) => {
 
 
 // MODAL 3 - Plano Corporativo
-const openModal3 = document.getElementById('open-modal3');
-const modal3 = document.getElementById('modal3');
-const closeModal3 = document.getElementById('close-modal3');
+const openModal3 = document.getElementById('open-modal-gamer-plus');
+const modal3 = document.getElementById('modal-plano-gamer-plus');
+const closeModal3 = document.getElementById('close-modal-plano-gamer-plus');
 
 openModal3.addEventListener('click', () => {
   modal3.classList.add('ativo');
@@ -64,9 +64,9 @@ window.addEventListener('click', (event) => {
 
 
 // MODAL 4 - Plano Corporativo
-const openModal4 = document.getElementById('open-modal4');
-const modal4 = document.getElementById('modal4');
-const closeModal4 = document.getElementById('close-modal4');
+const openModal4 = document.getElementById('open-modal-streamer');
+const modal4 = document.getElementById('modal-plano-streamer');
+const closeModal4 = document.getElementById('close-modal-plano-streamer');
 
 openModal4.addEventListener('click', () => {
   modal4.classList.add('ativo');

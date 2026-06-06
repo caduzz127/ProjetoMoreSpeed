@@ -192,50 +192,45 @@ html {
     }
 }
 
-.card-planos {
-    background: rgb(255, 255, 255);
-    width: 330px;
-    height: 740px;
-    padding-top: 50px;
-    border-radius: 16px;
-    border: 2px solid #343534;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-bottom: 10px;
-    overflow: visible;
-}
+
 
 .card-complete {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: #fff;
+    width: 330px;
+    height: 650px;
+    border-radius: 16px;
+    border: 1px solid #343534;
+    overflow: hidden;
 }
 
+.card-header.promo {
+    position: static;
+    transform: none;
+    width: 330px;
+    border-radius: 20px 20px 0 0;
+    display: block;
+}
 
-.card-header {
-    background: transparent;
+.card-header-informacao{
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+.card-header-informacao h2{
+    font-size: 1.6rem;
+    color: #050F28;
+    font-weight: 600;
+}
+
+.card-planos {
+    text-align: center;
     display: flex;
+    align-items: center;
     flex-direction: column;
-    align-items: center;
-    position: relative;
-}
-
-.card-header-titulo {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.card-header-titulo .promo {
-    position: absolute;
-    border-radius: 20px;
-    top: -70px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
+    margin-bottom: 10px;
+    overflow: hidden;
 }
 
 

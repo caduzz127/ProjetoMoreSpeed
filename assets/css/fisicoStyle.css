@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
 html {
-  color-scheme: light;
+    color-scheme: light;
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -426,11 +428,22 @@ form button:active {
     border: 0;
 }
 
+@media(max-width: 1490px) {
+
+    /*SOBRE*/
+    .sobre {
+        flex-direction: column;
+        gap: 18px;
+        padding: 18px;
+        align-items: center;
+    }
+}
+
 @media(max-width: 1024px) {
 
     .background {
         aspect-ratio: 1024 / 1536;
-        
+
     }
 
 
@@ -451,13 +464,7 @@ form button:active {
         margin-left: 0;
     }
 
-    /*SOBRE*/
-    .sobre {
-        flex-wrap: wrap;
-        gap: 18px;
-        padding: 18px;
-        align-items: center;
-    }
+
 
     .sobre-imagem {
         width: auto;
