@@ -1,94 +1,24 @@
 const mediaQueryPremium = window.matchMedia("(max-width: 1024px)");
 
 const TOTAL_PREMIUM = 4;
+const VISIVEIS_PREMIUM = 3;
 const DURATION_PREMIUM = 10000;
 
 let currentPremium = 0;
 let startTimePremium = null;
 let rafIdPremium = null;
 
-function verificarTamanhoPremium(e) {
-    if (e.matches) {
-        executarPremiumMobile();
-    } else {
-        executarPremiumDesktop();
-    }
-}
+function aplicarCardsVisiveisPremium() {
+    const cards = document.querySelectorAll("#planos-premium .card-complete");
 
-function executarPremiumMobile() {
-    if (rafIdPremium) {
-        cancelAnimationFrame(rafIdPremium);
-        rafIdPremium = null;
-    }
-
-    currentPremium = 0;
-    atualizarDotsPremium();
-
-    const container = document.getElementById("planos-premium");
-
-    if (container) {
-        container.style.transform = "translateX(300px)";
-    }
-
-    const progressFillPremium = document.getElementById("progressFillPremium");
-
-    if (progressFillPremium) {
-        progressFillPremium.style.width = "0%";
-    }
-}
-
-function executarPremiumDesktop() {
-    if (rafIdPremium) {
-        cancelAnimationFrame(rafIdPremium);
-        rafIdPremium = null;
-    }
-
-    const container = document.getElementById("planos-premium");
-
-    if (container) {
-        container.style.transform = "";
-    }
-
-    currentPremium = 0;
-    applyActivePremium();
-    resetProgressPremium();
-}
-
-window.proximoPremium = function () {
-    if (currentPremium < TOTAL_PREMIUM - 1) {
-        currentPremium++;
-        goToPremium(currentPremium);
-    }
-};
-
-window.anteriorPremium = function () {
-    if (currentPremium > 0) {
-        currentPremium--;
-        goToPremium(currentPremium);
-    }
-};
-
-window.goToPremium = function (index) {
-    currentPremium = index;
-
-    if (mediaQueryPremium.matches) {
-        const container = document.getElementById("planos-premium");
-
-        if (!container) return;
-
-        container.style.transform = `translateX(${300 - index * 300}px)`;
-
-        atualizarDotsPremium();
-    } else {
-        applyActivePremium();
-        resetProgressPremium();
-    }
-};
-
-function applyActivePremium() {
-    document.querySelectorAll("#planos-premium .card-complete").forEach((card, i) => {
-        card.classList.toggle("ativo", i === currentPremium);
+    cards.forEach((card) => {
+        card.classList.remove("ativo-premium");
     });
+
+    for (let i = 0; i < VISIVEIS_PREMIUM; i++) {
+        const index = (currentPremium + i) % TOTAL_PREMIUM;
+        cards[index].classList.add("ativo-premium");
+    }
 
     atualizarDotsPremium();
 }
@@ -98,6 +28,24 @@ function atualizarDotsPremium() {
         dott.classList.toggle("ativo", i === currentPremium);
     });
 }
+
+window.proximoPremium = function () {
+    currentPremium = (currentPremium + 1) % TOTAL_PREMIUM;
+    aplicarCardsVisiveisPremium();
+    resetProgressPremium();
+};
+
+window.anteriorPremium = function () {
+    currentPremium = (currentPremium - 1 + TOTAL_PREMIUM) % TOTAL_PREMIUM;
+    aplicarCardsVisiveisPremium();
+    resetProgressPremium();
+};
+
+window.goToPremium = function (index) {
+    currentPremium = index;
+    aplicarCardsVisiveisPremium();
+    resetProgressPremium();
+};
 
 function resetProgressPremium() {
     startTimePremium = null;
@@ -123,12 +71,12 @@ function animateProgressPremium(ts) {
 
     if (elapsed >= DURATION_PREMIUM) {
         currentPremium = (currentPremium + 1) % TOTAL_PREMIUM;
-        applyActivePremium();
+        aplicarCardsVisiveisPremium();
         startTimePremium = null;
     }
 
     rafIdPremium = requestAnimationFrame(animateProgressPremium);
 }
 
-mediaQueryPremium.addEventListener("change", verificarTamanhoPremium);
-verificarTamanhoPremium(mediaQueryPremium);
+aplicarCardsVisiveisPremium();
+resetProgressPremium();

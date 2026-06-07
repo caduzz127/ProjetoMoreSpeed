@@ -1,5 +1,5 @@
 const premium = document.getElementById('btn-assinaturas');
-const planoPremium = document.getElementById('planos-premium');
+const planoPremium = document.getElementById('planos-premium-wrapper');
 
 const internet = document.getElementById('btn-internet');
 const planoInternet = document.getElementById('planos-internet-wrapper');

@@ -199,7 +199,7 @@ html {
     justify-content: center;
     gap: 42px;
     flex-wrap: wrap;
-    padding-top: 100px;
+    padding-top: 50px;
 }
 
 .planos-premium.inativo {
@@ -208,7 +208,10 @@ html {
 
 
 
-
+.planos-premium-wrapper{
+    display: flex;
+    flex-direction: column;
+}
 
 
 .card-complete {
@@ -221,6 +224,14 @@ html {
     border-radius: 16px;
     border: 1px solid #343534;
     overflow: hidden;
+}
+
+#planos-premium .card-complete {
+    display: none;
+}
+
+#planos-premium .card-complete.ativo-premium {
+    display: flex;
 }
 
 .card-header.promo {
