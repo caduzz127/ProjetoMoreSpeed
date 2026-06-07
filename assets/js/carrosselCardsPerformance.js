@@ -13,12 +13,11 @@ function aplicarCardsVisiveisPremium() {
 
     cards.forEach((card) => {
         card.classList.remove("ativo-premium");
+        card.classList.remove("visivel-premium");
+        card.classList.remove("foco-premium");
     });
 
-    for (let i = 0; i < VISIVEIS_PREMIUM; i++) {
-        const index = (currentPremium + i) % TOTAL_PREMIUM;
-        cards[index].classList.add("ativo-premium");
-    }
+    cards[currentPremium].classList.add("foco-premium");
 
     atualizarDotsPremium();
 }
