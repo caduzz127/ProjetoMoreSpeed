@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palpite Copa - More Speed</title>
+    <link rel="shortcut icon" href="assets/imgs/logoMore.jpg" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1500ff;
+            background-image: url('assets/imgs/banner.svg');
+            background-repeat: no-repeat;
+            background-position: center 80%;
+            background-size: 500px 500px;
+            /* ajuste o tamanho da logo */
+            min-height: 100vh;
+        }
+
+        .container-palpite {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: rgb(255, 255, 255);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .palpite-header h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .palpite-jogo {
+            display: flex;
+            flex-direction: row;
+            margin: auto;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .times {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+            margin: 0 20px;
+        }
+
+        .times img {
+            width: 100px;
+            height: auto;
+        }
+
+        .times input {
+            padding: 5px;
+            width: 150px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .x h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 40px;
+        }
+
+        .enviar-palpite {
+            padding: 10px 20px;
+            background-color: #0011ff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 150px;
+            margin: auto;
+            margin-bottom: 20px;
+
+        }
+
+        .enviar-palpite p {
+            margin: 0;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .palpite-confirmacao-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .palpite-confirmacao-overlay.ativo {
+            display: flex;
+        }
+
+        .palpite-confirmacao {
+            padding: 10px;
+            width: 300px;
+            height: 200px;
+            background-color: white;
+            border: 2px solid #1f00b9;
+            border-radius: 10px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .palpite-confirmacao input {
+            padding: 5px;
+            width: 80%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .palpite-jogo {
+                flex-direction: column;
+            }
+
+            .times {
+                margin: 10px 0;
+            }
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="container-palpite">
+        <div class="palpite-header">
+            <h1>Dê o seu palpite!</h1>
+        </div>
+        <div class="palpite-jogo">
+            <div class="times">
+                <img src="assets/imgs/foto_brasil.svg" alt="Time 1">
+                <input type="text" placeholder="Digite seu palpite aqui..." id="palpite-brasil">
+            </div>
+            <div class="x">
+                <h2>X</h2>
+            </div>
+            <div class="times">
+                <img src="assets/imgs/foto_marrocos.svg" alt="Time 2">
+                <input type="text" placeholder="Digite o palpite aqui..." id="palpite-marrocos">
+            </div>
+        </div>
+
+
+        <button class="enviar-palpite" id="confirmar-palpite">
+            Enviar Palpite
+        </button>
+        <div class="palpite-footer">
+            <h3>O Jogo acontecerá as 19:00 do dia 13/06/2026 os palpite só serão aceitos até às 17:00 do dia 13/06/2026
+            </h3>
+        </div>
+    </div>
+
+    <div class="palpite-confirmacao-overlay" id="palpite-confirmacao-overlay">
+        <div class="palpite-confirmacao">
+
+            <h2>Para enviar seu Palpite</h2>
+            <p>digite o nome do assinante abaixo:</p>
+            <input type="text" id="nome-assinante" placeholder="Nome do Assinante" id="nome-assinante">
+
+            <button class="enviar-palpite" onclick="enviarPalpite()" id="enviar-palpite">
+                <p>Confirmar Palpite</p>
+            </button>
+        </div>
+    </div>
+
+    
+
+    <script>
+        const confirmarPalpite = document.getElementById('confirmar-palpite');
+        const palpiteConfirmacaoOverlay = document.getElementById('palpite-confirmacao-overlay');
+
+        confirmarPalpite.addEventListener('click', () => {
+
+            //PALPITES
+            const palpiteMarrocos = document.getElementById('palpite-marrocos').value.trim();
+            const palpiteBrasil = document.getElementById('palpite-brasil').value.trim();
+
+            if (palpiteMarrocos && palpiteBrasil) {
+                palpiteConfirmacaoOverlay.classList.add('ativo');
+            } else {
+                alert('Por favor, preencha os palpites para ambos os times antes de confirmar.');
+            }
+        });
+
+        function enviarPalpite() {
+            const nomeAssinante = document.getElementById('nome-assinante').value;
+            console.log("nome assinante: ", nomeAssinante);
+
+            const palpiteMarrocos = document.getElementById('palpite-marrocos').value.trim();
+            const palpiteBrasil = document.getElementById('palpite-brasil').value.trim();
+
+            if (nomeAssinante) {
+                alert(`Palpite confirmado para ${nomeAssinante}!\nBrasil: ${palpiteBrasil}\nMarrocos: ${palpiteMarrocos}`);
+
+                palpiteConfirmacaoOverlay.classList.remove('ativo');
+
+
+                enviarMensagemDeConfirmacao(5521965655662, `Olá, meu nome é ${nomeAssinante} e meu palpite para o jogo entre Brasil e Marrocos é:\nBrasil: ${palpiteBrasil}\nMarrocos: ${palpiteMarrocos}`);
+            } else {
+                alert('Por favor, preencha todos os campos para confirmar seu palpite.');
+            }
+        }
+        function enviarMensagemDeConfirmacao(telefone, mensagem) {
+            const palpiteMarrocos = document.getElementById('palpite-marrocos');
+            const palpiteBrasil = document.getElementById('palpite-brasil');
+            palpiteMarrocos.value = '';
+            palpiteBrasil.value = '';
+            const url = `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`;
+            window.open(url, '_blank');
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+
+</html>

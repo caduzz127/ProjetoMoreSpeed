@@ -1,7 +1,7 @@
 const telefoneSuporte = "5521965655662";
 const telefoneInstalacao = "5521965615909";
 const telefoneSuporteCorporativo = "5521985908839";
-
+const telefoneAtendimentoCorporativo = "5521985908839";
 
 function enviarMensagemWhatsApp() {
     const nome = document.getElementById('nome').value;
@@ -24,7 +24,7 @@ function enviarMensagemWhatsApp() {
 }
 
 
-
+//Planos Residenciais
 const planoIndividual = "Eu gostaria de Saber mais sobre o Plano Individual. Estou vindo pelo site";
 const planoFamilia = "Eu gostaria de Saber mais sobre o Plano Familia. Estou vindo pelo site";
 const planoFamiliaPlus = "Eu gostaria de Saber mais sobre o Plano Familia+. Estou vindo pelo site";
@@ -70,11 +70,12 @@ function AssinarPlanoStreamer() {
     window.open(url, '_blank');
 }
 
-
+//PAGINA DO CLIENTE
 function paginaCliente() {
     window.location.href = "http://atendimento.morespeed.com.br:8000/accounts/central/login";
 }
 
+//MENSAGEM PARA O CORPORATIVO
 function enviarMensagemWhatsAppCorporativo() {
     const nomeDaEmpresa = document.getElementById('nomeC').value;
     const email = document.getElementById('emailC').value;
@@ -85,23 +86,23 @@ function enviarMensagemWhatsAppCorporativo() {
         return;
     }
     const mensagemCorporativo = `Olá, gostaria de falar com um especialista sobre os planos corporativos. Estou vindo pelo site.\nNome da Empresa: ${nomeDaEmpresa}\nE-mail: ${email}\nTelefone: ${telefone}\nMensagem: ${mensagem}`;
-    const url = `https://wa.me/${telefoneSuporteCorporativo}?text=${encodeURIComponent(mensagemCorporativo)}`;
+    const url = `https://wa.me/${telefoneAtendimentoCorporativo}?text=${encodeURIComponent(mensagemCorporativo)}`;
     window.open(url, '_blank');
 }
 
 function enviarMensagemLinkDedicado() {
-    const url = `https://wa.me/${telefoneSuporteCorporativo}?text=${encodeURIComponent("Gostaria de informações sobre o Link Dedicado.")}`;
+    const url = `https://wa.me/${telefoneAtendimentoCorporativo}?text=${encodeURIComponent("Gostaria de informações sobre o Link Dedicado. Estou vindo pelo site.")}`;
     window.open(url, '_blank');
 }
 function enviarMensagemAtendimento(){
-    const url = `https://wa.me/${telefoneSuporteCorporativo}?text=${encodeURIComponent("Gostaria de informações sobre o Atendimento Especializado da Empresa.")}`;
+    const url = `https://wa.me/${telefoneAtendimentoCorporativo}?text=${encodeURIComponent("Gostaria de informações sobre o Atendimento Especializado da Empresa. Estou vindo pelo site.")}`;
     window.open(url, '_blank');
 }
 function enviarMensagemVoIP() {
-    const url = `https://wa.me/${telefoneSuporteCorporativo}?text=${encodeURIComponent("Gostaria de informações sobre o VoIP.")}`;
+    const url = `https://wa.me/${telefoneAtendimentoCorporativo}?text=${encodeURIComponent("Gostaria de informações sobre o VoIP. Estou vindo pelo site.")}`;
     window.open(url, '_blank');
 }
 function enviarMensagemSLA() {
-    const url = `https://wa.me/${telefoneSuporteCorporativo}?text=${encodeURIComponent("Gostaria de informações sobre o SLA garantido.")}`;
+    const url = `https://wa.me/${telefoneAtendimentoCorporativo}?text=${encodeURIComponent("Gostaria de informações sobre o SLA garantido. Estou vindo pelo site.")}`;
     window.open(url, '_blank');
 }
