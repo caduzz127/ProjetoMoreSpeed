@@ -143,9 +143,11 @@
             .times {
                 margin: 10px 0;
             }
-        }
 
-        
+            body {
+                background-position: center 150%;
+            }
+        }
     </style>
 </head>
 
@@ -191,7 +193,7 @@
         </div>
     </div>
 
-    
+
 
     <script>
         const confirmarPalpite = document.getElementById('confirmar-palpite');
@@ -218,8 +220,6 @@
             const palpiteBrasil = document.getElementById('palpite-brasil').value.trim();
 
             if (nomeAssinante) {
-                alert(`Palpite confirmado para ${nomeAssinante}!\nBrasil: ${palpiteBrasil}\nMarrocos: ${palpiteMarrocos}`);
-
                 palpiteConfirmacaoOverlay.classList.remove('ativo');
 
 
