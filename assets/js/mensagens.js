@@ -106,3 +106,9 @@ function enviarMensagemSLA() {
     const url = `https://wa.me/${telefoneAtendimentoCorporativo}?text=${encodeURIComponent("Gostaria de informações sobre o SLA garantido. Estou vindo pelo site.")}`;
     window.open(url, '_blank');
 }
+
+
+function enviarMensagemNamorados() {
+    const url = `https://wa.me/${telefoneAtendimentoCorporativo}?text=${encodeURIComponent("Gostaria de informações sobre a promoção de Namorados. Estou vindo pelo site.")}`;
+    window.open(url, '_blank');
+}

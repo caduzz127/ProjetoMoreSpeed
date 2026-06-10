@@ -607,7 +607,7 @@ form button:active {
     display: none;
     align-items: center;
     justify-content: center;
-    z-index: 9999;
+    z-index: 9998;
     padding: 20px;
 }
 
@@ -685,7 +685,7 @@ form button:active {
     background: rgba(0, 0, 0, 0.7);
     align-items: center;
     justify-content: center;
-    z-index: 99999;
+    z-index: 9998;
 }
 
 #modalCopa>div {
@@ -742,4 +742,63 @@ form button:active {
 .bola-flutuante img:hover {
     transform: rotate(360deg);
     transition: 1s;
+}
+
+
+
+/* MODAL DOS NAMORADOS */
+.modal-namorados-overlay {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 20px;
+    
+}
+.modal-namorados {
+    background: #ffffff;
+    max-width: 420px;
+    width: 100%;
+    border-radius: 16px;
+    padding: 28px 24px;
+    text-align: center;
+    position: relative;
+    font-family: Arial, sans-serif;
+    color: #000000;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    animation: modalZoom 0.3s ease;
+}
+
+.modal-namorados-close {
+    position: absolute;
+    top: 10px;
+    right: 17px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #000000;
+}
+.modal-namorados-destaque{
+    margin-top: 15px;
+    font-weight: bold;
+    color: #00fd61 !important;  
+}
+.modal-namorados-destaque-p{
+    color: #1800ad;
+    font-size: 1.2rem;
+    margin: 0;
+}
+.btn-modal-namorados{
+    display: inline-block;
+    margin-top: 15px;
+    background: #00fd61;
+    color: #000000;
+    padding: 12px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
 }
