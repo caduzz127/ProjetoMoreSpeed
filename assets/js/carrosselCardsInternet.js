@@ -61,17 +61,13 @@ function executarFuncaoMaior() {
 } 
 
 window.proximo = function() {
-    if (current < TOTAL - 1) {
-        current++;
-        goTo(current);
-    }
+    current = (current + 1) % TOTAL;
+    goTo(current);
 };
 
 window.anterior = function() {
-    if (current > 0) {
-        current--;
-        goTo(current);
-    }
+    current = (current - 1 + TOTAL) % TOTAL;
+    goTo(current);
 };
 
 window.goTo = function(index) {
