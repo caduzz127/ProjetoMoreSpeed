@@ -709,9 +709,11 @@ form button:active {
     border: 2px solid #7CFF00;
     border-radius: 50%;
 }
+
 .bola-flutuante.inativo {
     display: none;
 }
+
 .bola-flutuante img {
     width: 100%;
     height: 100%;
@@ -755,8 +757,9 @@ form button:active {
     justify-content: center;
     z-index: 9999;
     padding: 20px;
-    
+
 }
+
 .modal-namorados {
     background: #ffffff;
     max-width: 420px;
@@ -781,22 +784,42 @@ form button:active {
     cursor: pointer;
     color: #000000;
 }
-.modal-namorados-destaque{
+
+.modal-namorados-destaque {
     margin-top: 15px;
     font-weight: bold;
-    color: #00fd61 !important;  
+    color: #00fd61 !important;
 }
-.modal-namorados-destaque-p{
+
+.modal-namorados-destaque-p {
     color: #1800ad;
     font-size: 1.2rem;
     margin: 0;
 }
-.btn-modal-namorados{
+
+.modal-namorados h1 {
+    font-size: 48px;
+    color: #1800ad;
+    margin: 20px 0;
+    animation: pulse 1s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+.btn-modal-namorados {
     display: inline-block;
     margin-top: 15px;
     background: #00fd61;
     color: #000000;
     padding: 12px 22px;
+    border: 1px solid #1800ad;
     border-radius: 8px;
     text-decoration: none;
     font-weight: bold;
