@@ -266,7 +266,7 @@ html {
     padding: 10px;
 }
 
-.marcas-conteudo p {
+.marcas-conteudo span {
     color: #000000;
     font-size: 1.3rem;
     font-weight: 500;
@@ -331,6 +331,7 @@ html {
 #contato {
     scroll-margin-top: 200px;
 }
+
 #tecnologias {
     scroll-margin-top: 200px;
 }
@@ -488,27 +489,33 @@ form button:active {
     .marcas-conteiner {
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         gap: 24px;
-        padding: 0;
-        margin: 0;
+
         width: 100%;
+        
     }
 
     .marcas-conteudo {
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         gap: 10px;
         width: 100%;
+        max-width: 85%;
+        
         margin: auto;
+       
     }
 
-    .marcas-conteudo p {
+    .marcas-conteudo span {
         align-items: center;
-        text-align: center;
+        justify-content: center;
         padding: 0;
-        width: 100%;
-        min-width: 300px;
-        max-width: 100%;
+
+
     }
 
     .marcas-imagens {
