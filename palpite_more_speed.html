@@ -62,8 +62,9 @@
         .times img {
             width: 100px;
             height: auto;
+             box-shadow: 0 0 10px rgba(0, 0, 0, 0.281);
         }
-
+        
         .times input {
             padding: 5px;
             width: 150px;
@@ -165,8 +166,8 @@
                 <h2>X</h2>
             </div>
             <div class="times">
-                <img src="assets/imgs/escocia.webp" alt="Time 2">
-                <input type="text" placeholder="Digite o palpite aqui..." id="palpite-escocia">
+                <img src="assets/imgs/japao.webp" alt="Time 2">
+                <input type="text" placeholder="Digite o palpite aqui..." id="palpite-japao">
             </div>
         </div>
 
@@ -175,7 +176,7 @@
             Enviar Palpite
         </button>
         <div class="palpite-footer">
-            <h3>O Jogo acontecerá as 19:00 do dia 24/06/2026 os palpite só serão aceitos até às 17:00 do dia 24/06/2026
+            <h3>O Jogo acontecerá as 14:00 do dia 29/06/2026 os palpite só serão aceitos até às 12:00 do dia 29/06/2026
             </h3>
         </div>
     </div>
@@ -202,10 +203,10 @@
         confirmarPalpite.addEventListener('click', () => {
 
             //PALPITES
-            const palpiteEscocia = document.getElementById('palpite-escocia').value.trim();
+            const palpiteJapao = document.getElementById('palpite-japao').value.trim();
             const palpiteBrasil = document.getElementById('palpite-brasil').value.trim();
 
-            if (palpiteEscocia && palpiteBrasil) {
+            if (palpiteJapao && palpiteBrasil) {
                 palpiteConfirmacaoOverlay.classList.add('ativo');
             } else {
                 alert('Por favor, preencha os palpites para ambos os times antes de confirmar.');
@@ -216,22 +217,22 @@
             const nomeAssinante = document.getElementById('nome-assinante').value;
             console.log("nome assinante: ", nomeAssinante);
 
-            const palpiteEscocia = document.getElementById('palpite-escocia').value.trim();
+            const palpiteJapao = document.getElementById('palpite-japao').value.trim();
             const palpiteBrasil = document.getElementById('palpite-brasil').value.trim();
 
             if (nomeAssinante) {
                 palpiteConfirmacaoOverlay.classList.remove('ativo');
 
 
-                enviarMensagemDeConfirmacao(5521965655662, `Olá, meu nome é ${nomeAssinante} e meu palpite para o jogo entre Brasil e Escócia é:\nBrasil: ${palpiteBrasil}\nEscócia: ${palpiteEscocia}`);
+                enviarMensagemDeConfirmacao(5521965655662, `Olá, meu nome é ${nomeAssinante} e meu palpite para o jogo entre Brasil e Japão é:\nBrasil: ${palpiteBrasil}\nJapão: ${palpiteJapao}`);
             } else {
                 alert('Por favor, preencha todos os campos para confirmar seu palpite.');
             }
         }
         function enviarMensagemDeConfirmacao(telefone, mensagem) {
-            const palpiteEscocia = document.getElementById('palpite-escocia');
+            const palpiteJapao = document.getElementById('palpite-japao');
             const palpiteBrasil = document.getElementById('palpite-brasil');
-            palpiteEscocia.value = '';
+            palpiteJapao.value = '';
             palpiteBrasil.value = '';
             const url = `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`;
             window.open(url, '_blank');
