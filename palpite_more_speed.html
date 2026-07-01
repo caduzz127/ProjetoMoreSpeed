@@ -230,9 +230,9 @@
             }
         }
         function enviarMensagemDeConfirmacao(telefone, mensagem) {
-            const palpiteJapao = document.getElementById('palpite-japao');
+            const palpiteNoruega = document.getElementById('palpite-noruega');
             const palpiteBrasil = document.getElementById('palpite-brasil');
-            palpiteJapao.value = '';
+            palpiteNoruega.value = '';
             palpiteBrasil.value = '';
             const url = `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`;
             window.open(url, '_blank');
