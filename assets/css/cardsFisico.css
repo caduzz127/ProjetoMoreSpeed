@@ -338,7 +338,7 @@ html {
 
 .preco {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 8px;
     font-family: 'Montserrat', sans-serif;
     color: #0033cc;
@@ -662,8 +662,8 @@ html {
 .card-internet.ativo {
     opacity: 1;
     transform: scale(0.93);
-    flex: 1.28;
-    box-shadow: 0 12px 40px rgba(26, 79, 224, 0.2);
+    flex: 1.10;
+    box-shadow: 0 12px 12px rgba(26, 79, 224, 0.2);
     border-color: #1a4fe0;
     z-index: 2;
     position: relative;
@@ -695,10 +695,53 @@ html {
     padding-top: 20px;
 }
 
+
+.preco-internet {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    gap: 8px;
+    font-family: 'Montserrat', sans-serif;
+    color: #0033cc;
+    margin-top: 10px;
+}
+
 .so-internet {
-    margin-left: 30px;
     font-size: 14px;
     margin-top: 6px;
+}
+
+.rs-internet {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.valor-internet {
+    display: flex;
+    align-items: flex-start;
+}
+
+.inteiro-internet {
+    font-size: 90px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.centavos-internet {
+    display: flex;
+    flex-direction: column;
+    margin-top: 12px;
+    margin-left: 4px;
+}
+
+.cents-internet {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.mes-internet {
+    font-size: 14px;
 }
 
 .btn-internet {
@@ -855,6 +898,7 @@ html {
     }
 
     .card-internet {
+        display: none;
         box-sizing: border-box;
         flex: 0 0 300px;
         width: 300px;
@@ -864,22 +908,23 @@ html {
         transform: none;
     }
 
-    .card-internet.ativo {
+    .card-internet.ativo,
+    .card-internet.foco-internet {
+        display: block;
         flex: 0 0 300px;
         width: 300px;
         min-width: 300px;
         max-width: 300px;
         opacity: 1;
         transform: none;
+        border-color: #1a4fe0;
     }
 
     .carousel-controls-internet {
-        gap: 20px;
+        gap: 5px;
     }
 
-    .progress-bar-wrap {
-        display: none;
-    }
+    
 
     .seta-internet {
         width: 56px;

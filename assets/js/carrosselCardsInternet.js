@@ -1,137 +1,79 @@
-const mediaQuery = window.matchMedia("(max-width: 1024px)");
+const TOTAL_INTERNET = 3;
+const DURATION_INTERNET = 10000;
 
-const TOTAL = 3;
-const DURATION = 10000;
+let currentInternet = 0;
+let startTimeInternet = null;
+let rafIdInternet = null;
 
-let current = 0;
-let startTime = null;
-let rafId = null;
+function aplicarCardsVisiveisInternet() {
+    const cards = document.querySelectorAll("#planos-internet .card-internet");
 
-function verificarTamanho(e) {
-    if (e.matches) {
-        console.log("Modo Mobile/Tablet");
-        executarFuncaoMenor();
-    } else {
-        console.log("Modo Desktop");
-        executarFuncaoMaior();
-    }
-}
-
-function executarFuncaoMenor() {
-    console.log("Executando mobile");
-
-    if (rafId) {
-        cancelAnimationFrame(rafId);
-        rafId = null;
-    }
-
-    current = 0;
-    atualizarDots();
-
-    const container = document.getElementById("planos-internet");
-
-    if (container) {
-        container.style.transform = "translateX(300px)";
-    }
-
-    const progressFill = document.getElementById("progressFill");
-
-    if (progressFill) {
-        progressFill.style.width = "0%";
-    }
-}
-
-function executarFuncaoMaior() {
-    console.log("Executando desktop");
-
-    if (rafId) {
-        cancelAnimationFrame(rafId);
-        rafId = null;
-    }
-
-    const container = document.getElementById("planos-internet");
-
-    if (container) {
-        container.style.transform = "";
-    }
-
-    current = 0;
-    applyActive();
-    resetProgress();
-} 
-
-window.proximo = function() {
-    current = (current + 1) % TOTAL;
-    goTo(current);
-};
-
-window.anterior = function() {
-    current = (current - 1 + TOTAL) % TOTAL;
-    goTo(current);
-};
-
-window.goTo = function(index) {
-    current = index;
-
-    if (mediaQuery.matches) {
-        const container = document.getElementById("planos-internet");
-
-        if (!container) return;
-
-        container.style.transform = `translateX(${300 - index * 300}px)`;
-
-        atualizarDots();
-
-    } else {
-        applyActive();
-        resetProgress();
-    }
-};
-
-function applyActive() {
-    document.querySelectorAll(".card-internet").forEach((card, i) => {
-        card.classList.toggle("ativo", i === current);
+    cards.forEach((card) => {
+        card.classList.remove("ativo");
+        card.classList.remove("foco-internet");
     });
 
-    atualizarDots();
+    if (cards[currentInternet]) {
+        cards[currentInternet].classList.add("ativo");
+        cards[currentInternet].classList.add("foco-internet");
+    }
+
+    atualizarDotsInternet();
 }
 
-function atualizarDots() {
+function atualizarDotsInternet() {
     document.querySelectorAll(".dott").forEach((dott, i) => {
-        dott.classList.toggle("ativo", i === current);
+        dott.classList.toggle("ativo", i === currentInternet);
     });
 }
 
-function resetProgress() {
-    startTime = null;
+window.proximo = function () {
+    currentInternet = (currentInternet + 1) % TOTAL_INTERNET;
+    aplicarCardsVisiveisInternet();
+    resetProgressInternet();
+};
 
-    if (rafId) {
-        cancelAnimationFrame(rafId);
+window.anterior = function () {
+    currentInternet = (currentInternet - 1 + TOTAL_INTERNET) % TOTAL_INTERNET;
+    aplicarCardsVisiveisInternet();
+    resetProgressInternet();
+};
+
+window.goTo = function (index) {
+    currentInternet = index;
+    aplicarCardsVisiveisInternet();
+    resetProgressInternet();
+};
+
+function resetProgressInternet() {
+    startTimeInternet = null;
+
+    if (rafIdInternet) {
+        cancelAnimationFrame(rafIdInternet);
     }
 
-    rafId = requestAnimationFrame(animateProgress);
+    rafIdInternet = requestAnimationFrame(animateProgressInternet);
 }
 
-function animateProgress(ts) {
-    if (!startTime) startTime = ts;
+function animateProgressInternet(ts) {
+    if (!startTimeInternet) startTimeInternet = ts;
 
-    const elapsed = ts - startTime;
-    const pct = Math.min((elapsed / DURATION) * 100, 100);
+    const elapsed = ts - startTimeInternet;
+    const pct = Math.min((elapsed / DURATION_INTERNET) * 100, 100);
+    const progressFillInternet = document.getElementById("progressFill");
 
-    const progressFill = document.getElementById("progressFill");
-
-    if (progressFill) {
-        progressFill.style.width = pct + "%";
+    if (progressFillInternet) {
+        progressFillInternet.style.width = pct + "%";
     }
 
-    if (elapsed >= DURATION) {
-        current = (current + 1) % TOTAL;
-        applyActive();
-        startTime = null;
+    if (elapsed >= DURATION_INTERNET) {
+        currentInternet = (currentInternet + 1) % TOTAL_INTERNET;
+        aplicarCardsVisiveisInternet();
+        startTimeInternet = null;
     }
 
-    rafId = requestAnimationFrame(animateProgress);
+    rafIdInternet = requestAnimationFrame(animateProgressInternet);
 }
 
-mediaQuery.addEventListener("change", verificarTamanho);
-verificarTamanho(mediaQuery);
+aplicarCardsVisiveisInternet();
+resetProgressInternet();
