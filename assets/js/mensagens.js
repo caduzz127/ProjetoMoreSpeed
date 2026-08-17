@@ -72,7 +72,7 @@ function AssinarPlanoStreamer() {
 
 //PAGINA DO CLIENTE
 function paginaCliente() {
-    window.location.href = "http://atendimento.morespeed.com.br:8000/accounts/central/login";
+    window.location.href = "https://morespeed.sgp.tsmx.app/accounts/central/login";
 }
 
 //MENSAGEM PARA O CORPORATIVO
