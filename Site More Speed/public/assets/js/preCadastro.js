@@ -41,5 +41,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 function fazerPreCadastro() {
-    window.location.href = "../../telaCadastro.php";
+    window.location.href = "telaCadastro.php";
 }

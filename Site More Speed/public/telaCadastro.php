@@ -14,7 +14,7 @@ $method = $_SERVER["REQUEST_METHOD"];
 $cupomInserido = "";
 
 //VALIDAÇÃO DO CUPOM
-function validarMetodo($method,$cuponsValidos)
+function validarMetodo($method, $cuponsValidos)
 {
     if ($method == "POST") {
         $cupomInserido = $_POST["cupom"];
@@ -49,8 +49,8 @@ function validarMetodo($method,$cuponsValidos)
     }
 }
 
-validarMetodo($method,$cuponsValidos)
-?>
+validarMetodo($method, $cuponsValidos)
+    ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -279,5 +279,9 @@ validarMetodo($method,$cuponsValidos)
         </div>
     <?php endif; ?>
 </body>
-
+<script>
+    function fecharModal() {
+        window.location.href = "index.html";
+    }
+</script>
 </html>
